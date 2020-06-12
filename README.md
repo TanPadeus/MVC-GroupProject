@@ -1,20 +1,33 @@
 # MVC-GroupProject
 Członkowie grupy: Moryń Maciej, Wenda Artur
 
+# Spis treści
+1. Informacje ogólne
+2. Technologie
+3. Wartstwy MVC
+	* i. Widoki
+	* ii. Kontrolery
+	* iii. Modele
+4. Bazy Danych
+
+## Informacje ogólne
 Aplikacja internetowa do umieszczania projektów (z ich statusami oraz możliwością pobrania),
 posiadająca wyszukiwarkę zawężającą listę projektów działającą na zasadzie słów kluczowych (tagów)
 przypisanych do poszczególnych projektów.
 
-Portal tematyczny projektów grupowych:
+## Użyte technologie
 
-Kontroler zajmować się będzie tworzeniem nowych obiektów “projekt” (nazwa, status, krótki opis, link do pobrania, tagi)
-oraz wyszukiwaniem projektów po ich tagach, jak również przekazywać odpowiednie dane projektu do modelu.
-Dane do stworzenia obiektu “projekt” będą przekazywane poprzez krótki formularz na temat projektu
-(dane można zmodyfikować w późniejszym terminie).
+## Warstwy MVC
 
-Model w aplikacji zajmie się prezentacją obiektu, tj przekaże informacje jak dany obiekt zostanie wyświetlony.
-Dane szczegółowe na temat projektu zostaną mu dostarczone przez kontroler.
+### Widoki
+* Widok index, na stronie głównej newsy dotyczące projektów, możliwość przejścia do stron z listą projektów (z wyszukiwarką tagów),
+	panelu logowania się oraz do wyszukiwarki projektów po nazwie
+*	Widok search, czyli strona do wyszukiwania projektów po ich nazwie
+*	Widok blog, czyli strona z listą projektów wraz z ich krótkimi opisami oraz tagami; możliwość zawężenia listy poprzez
+	wybranie odpowiednich tagów.
+	
+### Kontrolery
 
-Aplikacja będzie posiadała kilka widoków:
-1. Kreator dodawania projektów, na którym uprawnione osoby mogą dodać swój projekt wypełniając krótki formularz.
-2. Strona główna z listą projektów oraz wyszukiwarką, która pozwoli usunąć niepasujące obiekty z listy.
+### Modele
+
+## Bazy Danych
