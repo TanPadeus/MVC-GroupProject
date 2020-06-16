@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2cc8fffd-8b8a-459c-99c3-b6114c47f3b0" name="Default Changelist" comment="" />
+    <list default="true" id="2cc8fffd-8b8a-459c-99c3-b6114c47f3b0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translations/messages+intl-icu.en.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/translations/messages+intl-icu.en.xlf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translations/messages+intl-icu.pl.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/translations/messages+intl-icu.pl.xlf" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +20,16 @@
       <executable />
     </execution>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="XAMPP PHP">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/php-cs-fixer/diff" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-code" />
@@ -135,9 +151,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/Xampp/php/php.exe" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -151,6 +167,15 @@
       <updated>1591889236818</updated>
       <workItem from="1591889238078" duration="5910000" />
       <workItem from="1591895282567" duration="8938000" />
+      <workItem from="1592249422361" duration="415000" />
+      <workItem from="1592249904094" duration="359000" />
+      <workItem from="1592250304032" duration="1451000" />
+      <workItem from="1592251787113" duration="1239000" />
+      <workItem from="1592253054207" duration="266000" />
+      <workItem from="1592253351270" duration="1954000" />
+      <workItem from="1592255320312" duration="560000" />
+      <workItem from="1592326683373" duration="3187000" />
+      <workItem from="1592339008234" duration="2918000" />
     </task>
     <servers />
   </component>
@@ -158,6 +183,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="440" y="122" key="#CLI_Interpreters" timestamp="1592252442274">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="440" y="122" key="#CLI_Interpreters/0.0.1536.824@0.0.1536.824" timestamp="1592252442274" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591891683334">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -166,25 +195,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="595" y="298" key="EditFileWatcherDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591892646558" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1591895389751">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="640" y="222" key="FileChooserDialogImpl" timestamp="1592252357786">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="640" y="222" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1592252357786" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1592250822766">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592250822766" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591895389751" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1591895389751">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1592250822766">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592250822766" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591895389751" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1591895389750">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1592250822766">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592250822766" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591895389750" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1591895389751">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1592250822766">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592250822766" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591895389751" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1591892625604">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="369" y="110" key="SettingsEditor" timestamp="1592254564539">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="369" y="110" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1592254564539" />
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1591892625604" />
     <state x="657" y="118" width="606" height="804" key="find.popup" timestamp="1591902124762">
       <screen x="0" y="0" width="1920" height="1040" />

@@ -29,7 +29,7 @@ class SecurityController extends AbstractController
             return $this->redirectToRoute('blog_index');
         }
 
-        $this->saveTargetPath($request->getSession(), 'main', $this->generateUrl('admin_index'));
+        $this->saveTargetPath($request->getSession(), 'main', $this->generateUrl('homepage'));
 
         return $this->render('security/login.html.twig', [
             // last username entered by the user (if any)
