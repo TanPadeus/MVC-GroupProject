@@ -9,17 +9,16 @@ Członkowie grupy: Moryń Maciej, Wenda Artur
 	* ii. [Kontrolery](#kontrolery)
 	* iii. [Modele](#modele)
 		+ [Comment](#comment)
-    		+ [Post](#post)
-    		+ [Tag](#tag)
-    		+ [User](#user)
+		+ [Post](#post)
+		+ [Tag](#tag)
+		+ [User](#user)
 4. [Bazy Danych](#baza-danych)
 	* [Tabele](#tabele)
-    		+ [Comments](#comments)
-    		+ [Posts](#posts)
-    		+ [Post_Tag](#post-tag)
-    		+ [Tags](#tags)
-    		+ [Users](#users)
-	
+		+ [Comments](#comments)
+		+ [Posts](#posts)
+		+ [Post_Tag](#post-tag)
+		+ [Tags](#tags)
+		+ [Users](#users)
 
 # Informacje ogólne
 Aplikacja internetowa do umieszczania projektów (z ich statusami oraz możliwością pobrania),
