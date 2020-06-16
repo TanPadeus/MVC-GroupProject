@@ -198,9 +198,21 @@
                 <source>menu.admin</source>
                 <target>Panel administracyjny</target>
             </trans-unit>
+            <trans-unit id="menu.user">
+                <source>menu.user</source>
+                <target>Konto</target>
+            </trans-unit>
+            <trans-unit id="menu.login">
+                <source>menu.login</source>
+                <target>Zaloguj się</target>
+            </trans-unit>
             <trans-unit id="menu.logout">
                 <source>menu.logout</source>
                 <target>Wyloguj się</target>
+            </trans-unit>
+            <trans-unit id="menu.search">
+                <source>menu.search</source>
+                <target>Szukaj</target>
             </trans-unit>
 
             <trans-unit id="post.to_publish_a_comment">

@@ -287,6 +287,10 @@
                 <source>menu.user</source>
                 <target>Account</target>
             </trans-unit>
+            <trans-unit id="menu.login">
+                <source>menu.login</source>
+                <target>Login</target>
+            </trans-unit>
             <trans-unit id="menu.logout">
                 <source>menu.logout</source>
                 <target>Logout</target>
