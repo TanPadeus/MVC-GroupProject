@@ -2,13 +2,24 @@
 Członkowie grupy: Moryń Maciej, Wenda Artur
 
 # Spis treści
-1. Informacje ogólne
-2. Technologie
-3. Wartstwy MVC
-	* i. Widoki
-	* ii. Kontrolery
-	* iii. Modele
-4. Bazy Danych
+1. [Informacje ogólne](#informacje-og-lne)
+2. [Technologie](#u-yte-technologie)
+3. [Wartstwy MVC](#warstwy-mvc)
+	* i. [Widoki](#widoki)
+	* ii. [Kontrolery](#kontrolery)
+	* iii. [Modele](#modele)
+		+ [Comment](#comment)
+    		+ [Post](#post)
+    		+ [Tag](#tag)
+    		+ [User](#user)
+4. [Bazy Danych](#baza-danych)
+	* [Tabele](#tabele)
+    		+ [Comments](#comments)
+    		+ [Posts](#posts)
+    		+ [Post_Tag](#post-tag)
+    		+ [Tags](#tags)
+    		+ [Users](#users)
+	
 
 # Informacje ogólne
 Aplikacja internetowa do umieszczania projektów (z ich statusami oraz możliwością pobrania),
