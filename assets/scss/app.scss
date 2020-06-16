@@ -56,6 +56,11 @@ i {
    ------------------------------------------------------------------------- */
 .m-b-0 { margin-bottom: 0 }
 
+.center-row{
+  display: flex;
+  justify-content: center;
+}
+
 /* Page elements
    ------------------------------------------------------------------------- */
 body {
@@ -226,24 +231,6 @@ body#homepage {
 
 /* Page: 'Login'
    ------------------------------------------------------------------------- */
-body#login #login-users-help p {
-  font-size: 15px;
-  line-height: 1.42857
-}
-
-body#login #login-users-help p:last-child {
-  margin-bottom: 0
-}
-
-body#login #login-users-help p .label {
-  margin-right: 5px
-}
-
-body#login #login-users-help p .console {
-  display: block;
-  margin: 5px 0;
-  padding: 10px
-}
 
 /* Common Blog page elements
    ------------------------------------------------------------------------- */
@@ -358,3 +345,5 @@ body#blog_search .post-metadata {
   font-size: 16px;
   margin-bottom: 8px;
 }
+
+
