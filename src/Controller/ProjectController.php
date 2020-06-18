@@ -21,7 +21,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * Controller used to manage project contents in the public part of the site.
  *
- * @Route("/project")
+ * @Route("/projects")
  *
  */
 class ProjectController extends AbstractController
@@ -50,7 +50,7 @@ class ProjectController extends AbstractController
     }
 
     /**
-     * @Route("/projects/{slug}", methods="GET", name="blog_post")
+     * @Route("/project/{slug}", methods="GET", name="blog_post")
      *
      */
     public function postShow(Project $post): Response
