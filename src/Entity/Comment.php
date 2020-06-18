@@ -25,9 +25,9 @@ class Comment
     private $id;
 
     /**
-     * @var Post
+     * @var Project
      *
-     * @ORM\ManyToOne(targetEntity="Post", inversedBy="comments")
+     * @ORM\ManyToOne(targetEntity="Project", inversedBy="comments")
      * @ORM\JoinColumn(nullable=false)
      */
     private $post;
@@ -111,12 +111,12 @@ class Comment
         $this->author = $author;
     }
 
-    public function getPost(): ?Post
+    public function getPost(): ?Project
     {
         return $this->post;
     }
 
-    public function setPost(Post $post): void
+    public function setPost(Project $post): void
     {
         $this->post = $post;
     }

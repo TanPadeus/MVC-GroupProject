@@ -4,7 +4,7 @@
 namespace App\DataFixtures;
 
 use App\Entity\Comment;
-use App\Entity\Post;
+use App\Entity\Project;
 use App\Entity\Tag;
 use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
@@ -64,7 +64,7 @@ class AppFixtures extends Fixture
     private function loadPosts(ObjectManager $manager): void
     {
         foreach ($this->getPostData() as [$title, $slug, $summary, $content, $publishedAt, $author, $tags]) {
-            $post = new Post();
+            $post = new Project();
             $post->setTitle($title);
             $post->setSlug($slug);
             $post->setSummary($summary);

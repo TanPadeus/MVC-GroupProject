@@ -2,7 +2,7 @@
 
 namespace App\Security;
 
-use App\Entity\Post;
+use App\Entity\Project;
 use App\Entity\User;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Authorization\Voter\Voter;
@@ -23,7 +23,7 @@ class PostVoter extends Voter
      */
     protected function supports($attribute, $subject): bool
     {
-        return $subject instanceof Post && \in_array($attribute, [self::SHOW, self::EDIT, self::DELETE], true);
+        return $subject instanceof Project && \in_array($attribute, [self::SHOW, self::EDIT, self::DELETE], true);
     }
 
     /**

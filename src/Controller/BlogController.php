@@ -4,10 +4,10 @@
 namespace App\Controller;
 
 use App\Entity\Comment;
-use App\Entity\Post;
+use App\Entity\Project;
 use App\Events\CommentCreatedEvent;
 use App\Form\CommentType;
-use App\Repository\PostRepository;
+use App\Repository\ProjectRepository;
 use App\Repository\TagRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
@@ -33,7 +33,7 @@ class BlogController extends AbstractController
      * @Cache(smaxage="10")
      *
      */
-    public function index(Request $request, int $page, string $_format, PostRepository $posts, TagRepository $tags): Response
+    public function index(Request $request, int $page, string $_format, ProjectRepository $posts, TagRepository $tags): Response
     {
         $tag = null;
         if ($request->query->has('tag')) {
@@ -53,7 +53,7 @@ class BlogController extends AbstractController
      * @Route("/posts/{slug}", methods="GET", name="blog_post")
      *
      */
-    public function postShow(Post $post): Response
+    public function postShow(Project $post): Response
     {
         return $this->render('blog/post_show.html.twig', ['post' => $post]);
     }
@@ -64,7 +64,7 @@ class BlogController extends AbstractController
      * @ParamConverter("post", options={"mapping": {"postSlug": "slug"}})
      *
      */
-    public function commentNew(Request $request, Post $post, EventDispatcherInterface $eventDispatcher): Response
+    public function commentNew(Request $request, Project $post, EventDispatcherInterface $eventDispatcher): Response
     {
         $comment = new Comment();
         $comment->setAuthor($this->getUser());
@@ -94,10 +94,10 @@ class BlogController extends AbstractController
      * blog/post_show.html.twig template. That's why it's not needed to define
      * a route name for it.
      *
-     * The "id" of the Post is passed in and then turned into a Post object
+     * The "id" of the Project is passed in and then turned into a Project object
      * automatically by the ParamConverter.
      */
-    public function commentForm(Post $post): Response
+    public function commentForm(Project $post): Response
     {
         $form = $this->createForm(CommentType::class);
 
@@ -110,7 +110,7 @@ class BlogController extends AbstractController
     /**
      * @Route("/search", methods="GET", name="blog_search")
      */
-    public function search(Request $request, PostRepository $posts): Response
+    public function search(Request $request, ProjectRepository $posts): Response
     {
         if (!$request->isXmlHttpRequest()) {
             return $this->render('blog/search.html.twig');

@@ -2,7 +2,7 @@
 
 namespace App\Repository;
 
-use App\Entity\Post;
+use App\Entity\Project;
 use App\Entity\Tag;
 use App\Pagination\Paginator;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
@@ -14,11 +14,11 @@ use function Symfony\Component\String\u;
  * querying for blog post information.
  *
  */
-class PostRepository extends ServiceEntityRepository
+class ProjectRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Post::class);
+        parent::__construct($registry, Project::class);
     }
 
     public function findLatest(int $page = 1, Tag $tag = null): Paginator
@@ -41,9 +41,9 @@ class PostRepository extends ServiceEntityRepository
     }
 
     /**
-     * @return Post[]
+     * @return Project[]
      */
-    public function findBySearchQuery(string $query, int $limit = Post::NUM_ITEMS): array
+    public function findBySearchQuery(string $query, int $limit = Project::NUM_ITEMS): array
     {
         $searchTerms = $this->extractSearchTerms($query);
 

@@ -3,9 +3,9 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Post;
+use App\Entity\Project;
 use App\Form\PostType;
-use App\Repository\PostRepository;
+use App\Repository\ProjectRepository;
 use App\Security\PostVoter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -23,7 +23,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class BlogController extends AbstractController
 {
     /**
-     * Lists all Post entities.
+     * Lists all Project entities.
      *
      * This controller responds to two different routes with the same URL:
      *   * 'admin_post_index' is the route with a name that follows the same
@@ -34,7 +34,7 @@ class BlogController extends AbstractController
      * @Route("/", methods="GET", name="admin_index")
      * @Route("/", methods="GET", name="admin_post_index")
      */
-    public function index(PostRepository $posts): Response
+    public function index(ProjectRepository $posts): Response
     {
         $authorPosts = $posts->findBy(['author' => $this->getUser()], ['publishedAt' => 'DESC']);
 
@@ -42,14 +42,14 @@ class BlogController extends AbstractController
     }
 
     /**
-     * Creates a new Post entity.
+     * Creates a new Project entity.
      *
      * @Route("/new", methods="GET|POST", name="admin_post_new")
      *
      */
     public function new(Request $request): Response
     {
-        $post = new Post();
+        $post = new Project();
         $post->setAuthor($this->getUser());
 
         $form = $this->createForm(PostType::class, $post)
@@ -79,11 +79,11 @@ class BlogController extends AbstractController
     }
 
     /**
-     * Finds and displays a Post entity.
+     * Finds and displays a Project entity.
      *
      * @Route("/{id<\d+>}", methods="GET", name="admin_post_show")
      */
-    public function show(Post $post): Response
+    public function show(Project $post): Response
     {
 
         $this->denyAccessUnlessGranted(PostVoter::SHOW, $post, 'Posts can only be shown to their authors.');
@@ -94,12 +94,12 @@ class BlogController extends AbstractController
     }
 
     /**
-     * Displays a form to edit an existing Post entity.
+     * Displays a form to edit an existing Project entity.
      *
      * @Route("/{id<\d+>}/edit", methods="GET|POST", name="admin_post_edit")
      * @IsGranted("edit", subject="post", message="Posts can only be edited by their authors.")
      */
-    public function edit(Request $request, Post $post): Response
+    public function edit(Request $request, Project $post): Response
     {
         $form = $this->createForm(PostType::class, $post);
         $form->handleRequest($request);
@@ -119,12 +119,12 @@ class BlogController extends AbstractController
     }
 
     /**
-     * Deletes a Post entity.
+     * Deletes a Project entity.
      *
      * @Route("/{id}/delete", methods="POST", name="admin_post_delete")
      * @IsGranted("delete", subject="post")
      */
-    public function delete(Request $request, Post $post): Response
+    public function delete(Request $request, Project $post): Response
     {
         if (!$this->isCsrfTokenValid('delete', $request->request->get('token'))) {
             return $this->redirectToRoute('admin_post_index');
