@@ -3,9 +3,9 @@
 # the template can be rendered without executing any logic in your own controller.
 homepage:
     path: /{_locale}
-    controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
+    controller: App\Controller\NewsController::index
     requirements:
         _locale: '%app_locales%'
     defaults:
-        template: default/homepage.html.twig
+        page: 1
         _locale: '%locale%'

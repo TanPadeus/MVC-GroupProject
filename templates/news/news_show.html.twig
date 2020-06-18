@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body_id 'news_post_show' %}
+
+{% block main %}
+    <h1>{{ news.title }}</h1>
+
+    <p class="post-metadata">
+        <span class="metadata"><i class="fa fa-calendar"></i> {{ news.publishedAt|format_datetime('long', 'medium', '', 'UTC') }}</span>
+        <span class="metadata"><i class="fa fa-user"></i> {{ news.author.fullName }}</span>
+    </p>
+
+    {{ news.content|markdown_to_html|sanitize_html }}
+{% endblock %}
+
+{% block sidebar %}
+    {% if is_granted('edit', news) %}
+        <div class="section">
+            <a class="btn btn-lg btn-block btn-success" href="{{ path('admin_news_edit', {id: news.id}) }}">
+                <i class="fa fa-edit" aria-hidden="true"></i> {{ 'action.edit_news'|trans }}
+            </a>
+        </div>
+    {% endif %}
+
+
+{% endblock %}
