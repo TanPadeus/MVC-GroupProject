@@ -19,12 +19,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * Controller used to manage blog contents in the public part of the site.
+ * Controller used to manage project contents in the public part of the site.
  *
- * @Route("/blog")
+ * @Route("/project")
  *
  */
-class BlogController extends AbstractController
+class ProjectController extends AbstractController
 {
     /**
      * @Route("/", defaults={"page": "1", "_format"="html"}, methods="GET", name="blog_index")
@@ -44,18 +44,18 @@ class BlogController extends AbstractController
         // Every template name also has two extensions that specify the format and
         // engine for that template.
         // See https://symfony.com/doc/current/templates.html#template-naming
-        return $this->render('blog/index.'.$_format.'.twig', [
+        return $this->render('project/index.'.$_format.'.twig', [
             'paginator' => $latestPosts,
         ]);
     }
 
     /**
-     * @Route("/posts/{slug}", methods="GET", name="blog_post")
+     * @Route("/projects/{slug}", methods="GET", name="blog_post")
      *
      */
     public function postShow(Project $post): Response
     {
-        return $this->render('blog/post_show.html.twig', ['post' => $post]);
+        return $this->render('project/post_show.html.twig', ['post' => $post]);
     }
 
     /**
@@ -80,10 +80,10 @@ class BlogController extends AbstractController
 
             $eventDispatcher->dispatch(new CommentCreatedEvent($comment));
 
-            return $this->redirectToRoute('blog_post', ['slug' => $post->getSlug()]);
+            return $this->redirectToRoute('project_post', ['slug' => $post->getSlug()]);
         }
 
-        return $this->render('blog/comment_form_error.html.twig', [
+        return $this->render('project/comment_form_error.html.twig', [
             'post' => $post,
             'form' => $form->createView(),
         ]);
@@ -91,7 +91,7 @@ class BlogController extends AbstractController
 
     /**
      * This controller is called directly via the render() function in the
-     * blog/post_show.html.twig template. That's why it's not needed to define
+     * project/post_show.html.twig template. That's why it's not needed to define
      * a route name for it.
      *
      * The "id" of the Project is passed in and then turned into a Project object
@@ -101,7 +101,7 @@ class BlogController extends AbstractController
     {
         $form = $this->createForm(CommentType::class);
 
-        return $this->render('blog/_comment_form.html.twig', [
+        return $this->render('project/_comment_form.html.twig', [
             'post' => $post,
             'form' => $form->createView(),
         ]);
@@ -113,7 +113,7 @@ class BlogController extends AbstractController
     public function search(Request $request, ProjectRepository $posts): Response
     {
         if (!$request->isXmlHttpRequest()) {
-            return $this->render('blog/search.html.twig');
+            return $this->render('project/search.html.twig');
         }
 
         $query = $request->query->get('q', '');

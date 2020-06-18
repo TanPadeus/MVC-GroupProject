@@ -2,7 +2,7 @@
 
 {% if show_confirmation|default(false) %}
     {% set attr = {'data-confirmation': 'true'} %}
-    {{ include('blog/_delete_post_confirmation.html.twig') }}
+    {{ include('project/_delete_post_confirmation.html.twig') }}
 {% endif %}
 
 {{ form_start(form, {attr: attr|default({})}) }}

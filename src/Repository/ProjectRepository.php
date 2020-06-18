@@ -11,7 +11,7 @@ use function Symfony\Component\String\u;
 
 /**
  * This custom Doctrine repository contains some methods which are useful when
- * querying for blog post information.
+ * querying for project post information.
  *
  */
 class ProjectRepository extends ServiceEntityRepository

@@ -12,11 +12,11 @@
 
     {{ post.content|markdown_to_html|sanitize_html }}
 
-    {{ include('blog/_post_tags.html.twig') }}
+    {{ include('project/_post_tags.html.twig') }}
 
     <div id="post-add-comment" class="well">
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-            {{ render(controller('App\\Controller\\BlogController::commentForm', {'id': post.id})) }}
+            {{ render(controller('App\\Controller\\ProjectController::commentForm', {'id': post.id})) }}
         {% else %}
             <p>
                 <a class="btn btn-success" href="{{ path('security_login', {'redirect_to': app.request.pathInfo}) }}">

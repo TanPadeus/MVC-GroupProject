@@ -13,7 +13,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Table(name="projects")
  * @UniqueEntity(fields={"slug"}, errorPath="title", message="post.slug_unique")
  *
- * Defines the properties of the Project entity to represent the blog posts.
+ * Defines the properties of the Project entity to represent the project posts.
  *
  */
 class Project

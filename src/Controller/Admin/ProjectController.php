@@ -15,12 +15,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * Controller used to manage blog contents in the backend.
+ * Controller used to manage project contents in the backend.
  *
- * @Route("/admin/post")
+ * @Route("/admin/project")
  * @IsGranted("ROLE_ADMIN")
  */
-class BlogController extends AbstractController
+class ProjectController extends AbstractController
 {
     /**
      * Lists all Project entities.
@@ -38,7 +38,7 @@ class BlogController extends AbstractController
     {
         $authorPosts = $posts->findBy(['author' => $this->getUser()], ['publishedAt' => 'DESC']);
 
-        return $this->render('admin/blog/index.html.twig', ['posts' => $authorPosts]);
+        return $this->render('admin/project/index.html.twig', ['posts' => $authorPosts]);
     }
 
     /**
@@ -72,7 +72,7 @@ class BlogController extends AbstractController
             return $this->redirectToRoute('admin_post_index');
         }
 
-        return $this->render('admin/blog/new.html.twig', [
+        return $this->render('admin/project/new.html.twig', [
             'post' => $post,
             'form' => $form->createView(),
         ]);
@@ -88,7 +88,7 @@ class BlogController extends AbstractController
 
         $this->denyAccessUnlessGranted(PostVoter::SHOW, $post, 'Posts can only be shown to their authors.');
 
-        return $this->render('admin/blog/show.html.twig', [
+        return $this->render('admin/project/show.html.twig', [
             'post' => $post,
         ]);
     }
@@ -112,7 +112,7 @@ class BlogController extends AbstractController
             return $this->redirectToRoute('admin_post_edit', ['id' => $post->getId()]);
         }
 
-        return $this->render('admin/blog/edit.html.twig', [
+        return $this->render('admin/project/edit.html.twig', [
             'post' => $post,
             'form' => $form->createView(),
         ]);
