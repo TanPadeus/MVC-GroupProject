@@ -1,4 +1,4 @@
-// This project uses "Yarn" package manager for managing JavaScript dependencies along
+// This projects uses "Yarn" package manager for managing JavaScript dependencies along
 // with "Webpack Encore" library that helps working with the CSS and JavaScript files
 // that are stored in the "assets/" directory.
 

@@ -21,7 +21,7 @@ use function Symfony\Component\String\u;
 /**
  * A console command that creates users and stores them in the database.
  *
- * To use this command, open a terminal window, enter into your project
+ * To use this command, open a terminal window, enter into your projects
  * directory and execute the following:
  *
  *     $ php bin/console app:add-user
