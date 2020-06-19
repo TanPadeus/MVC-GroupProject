@@ -384,6 +384,11 @@
                 <source>paginator.current</source>
                 <target>(current)</target>
             </trans-unit>
+
+            <trans-unit id="title.news_list">
+                <source>title.news_list</source>
+                <target>News list</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
