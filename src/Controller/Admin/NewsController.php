@@ -123,8 +123,6 @@ class NewsController extends AbstractController
             return $this->redirectToRoute('admin_news_index');
         }
 
-        $news->getTags()->clear();
-
         $em = $this->getDoctrine()->getManager();
         $em->remove($news);
         $em->flush();

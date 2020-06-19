@@ -34,7 +34,7 @@ class NewsController extends AbstractController
     }
 
     /**
-     * @Route("/news/{slug}", methods="GET", name="news_post")
+     * @Route("/{slug}", methods="GET", name="news_post")
      *
      */
     public function newsShow(News $news): Response
