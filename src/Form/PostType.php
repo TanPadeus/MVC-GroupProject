@@ -16,7 +16,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
 /**
- * Defines the form used to create and manipulate project posts.
+ * Defines the form used to create and manipulate projects posts.
  *
  */
 class PostType extends AbstractType

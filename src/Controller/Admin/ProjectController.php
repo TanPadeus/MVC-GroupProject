@@ -15,9 +15,9 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * Controller used to manage project contents in the backend.
+ * Controller used to manage projects contents in the backend.
  *
- * @Route("/admin/project")
+ * @Route("/admin/projects")
  * @IsGranted("ROLE_ADMIN")
  */
 class ProjectController extends AbstractController
@@ -32,19 +32,19 @@ class ProjectController extends AbstractController
      *     to create simpler links in the templates.
      *
      * @Route("/", methods="GET", name="admin_index")
-     * @Route("/", methods="GET", name="admin_post_index")
+     * @Route("/", methods="GET", name="admin_project_index")
      */
     public function index(ProjectRepository $posts): Response
     {
         $authorPosts = $posts->findBy(['author' => $this->getUser()], ['publishedAt' => 'DESC']);
 
-        return $this->render('admin/project/index.html.twig', ['posts' => $authorPosts]);
+        return $this->render('admin/projects/index.html.twig', ['posts' => $authorPosts]);
     }
 
     /**
      * Creates a new Project entity.
      *
-     * @Route("/new", methods="GET|POST", name="admin_post_new")
+     * @Route("/new", methods="GET|POST", name="admin_project_new")
      *
      */
     public function new(Request $request): Response
@@ -66,13 +66,13 @@ class ProjectController extends AbstractController
             $this->addFlash('success', 'post.created_successfully');
 
             if ($form->get('saveAndCreateNew')->isClicked()) {
-                return $this->redirectToRoute('admin_post_new');
+                return $this->redirectToRoute('admin_project_new');
             }
 
-            return $this->redirectToRoute('admin_post_index');
+            return $this->redirectToRoute('admin_project_index');
         }
 
-        return $this->render('admin/project/new.html.twig', [
+        return $this->render('admin/projects/new.html.twig', [
             'post' => $post,
             'form' => $form->createView(),
         ]);
@@ -81,14 +81,14 @@ class ProjectController extends AbstractController
     /**
      * Finds and displays a Project entity.
      *
-     * @Route("/{id<\d+>}", methods="GET", name="admin_post_show")
+     * @Route("/{id<\d+>}", methods="GET", name="admin_project_show")
      */
     public function show(Project $post): Response
     {
 
         $this->denyAccessUnlessGranted(PostVoter::SHOW, $post, 'Posts can only be shown to their authors.');
 
-        return $this->render('admin/project/show.html.twig', [
+        return $this->render('admin/projects/show.html.twig', [
             'post' => $post,
         ]);
     }
@@ -96,7 +96,7 @@ class ProjectController extends AbstractController
     /**
      * Displays a form to edit an existing Project entity.
      *
-     * @Route("/{id<\d+>}/edit", methods="GET|POST", name="admin_post_edit")
+     * @Route("/{id<\d+>}/edit", methods="GET|POST", name="admin_project_edit")
      * @IsGranted("edit", subject="post", message="Posts can only be edited by their authors.")
      */
     public function edit(Request $request, Project $post): Response
@@ -109,10 +109,10 @@ class ProjectController extends AbstractController
 
             $this->addFlash('success', 'post.updated_successfully');
 
-            return $this->redirectToRoute('admin_post_edit', ['id' => $post->getId()]);
+            return $this->redirectToRoute('admin_project_edit', ['id' => $post->getId()]);
         }
 
-        return $this->render('admin/project/edit.html.twig', [
+        return $this->render('admin/projects/edit.html.twig', [
             'post' => $post,
             'form' => $form->createView(),
         ]);
@@ -121,13 +121,13 @@ class ProjectController extends AbstractController
     /**
      * Deletes a Project entity.
      *
-     * @Route("/{id}/delete", methods="POST", name="admin_post_delete")
+     * @Route("/{id}/delete", methods="POST", name="admin_project_delete")
      * @IsGranted("delete", subject="post")
      */
     public function delete(Request $request, Project $post): Response
     {
         if (!$this->isCsrfTokenValid('delete', $request->request->get('token'))) {
-            return $this->redirectToRoute('admin_post_index');
+            return $this->redirectToRoute('admin_project_index');
         }
 
         $post->getTags()->clear();
@@ -138,6 +138,6 @@ class ProjectController extends AbstractController
 
         $this->addFlash('success', 'post.deleted_successfully');
 
-        return $this->redirectToRoute('admin_post_index');
+        return $this->redirectToRoute('admin_project_index');
     }
 }

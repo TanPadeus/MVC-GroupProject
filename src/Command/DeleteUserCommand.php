@@ -16,7 +16,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 /**
  * A console command that deletes users from the database.
  *
- * To use this command, open a terminal window, enter into your project
+ * To use this command, open a terminal window, enter into your projects
  * directory and execute the following:
  *
  *     $ php bin/console app:delete-user

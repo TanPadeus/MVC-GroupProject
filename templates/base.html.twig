@@ -5,7 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>{% block title %}Symfony Demo application{% endblock %}</title>
-        <link rel="alternate" type="application/rss+xml" title="{{ 'rss.title'|trans }}" href="{{ path('blog_rss') }}">
+        <link rel="alternate" type="application/rss+xml" title="{{ 'rss.title'|trans }}" href="{{ path('projects_rss') }}">
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -21,7 +21,7 @@
                     <div class="container">
                         <div class="navbar-header col-md-3 col-lg-2">
                             <a class="navbar-brand" href="{{ path('homepage') }}">
-                                Symfony Demo
+                                Our Projects
                             </a>
 
                             <button type="button" class="navbar-toggle"
@@ -38,14 +38,14 @@
 
                                 {% block header_navigation_links %}
                                     <li>
-                                        <a href="{{ path('blog_index') }}">
+                                        <a href="{{ path('projects_index') }}">
                                             <i class="fa fa-home" aria-hidden="true"></i> {{ 'menu.homepage'|trans }}
                                         </a>
                                     </li>
 
                                     {% if is_granted('ROLE_ADMIN') %}
                                         <li>
-                                            <a href="{{ path('admin_post_index') }}">
+                                            <a href="{{ path('admin_project_index') }}">
                                                 <i class="fa fa-lock" aria-hidden="true"></i> {{ 'menu.admin'|trans }}
                                             </a>
                                         </li>
@@ -53,7 +53,7 @@
                                 {% endblock %}
 
                                 <li>
-                                    <a href="{{ path('blog_search') }}"> <i class="fa fa-search"></i> {{ 'menu.search'|trans }}</a>
+                                    <a href="{{ path('projects_search') }}"> <i class="fa fa-search"></i> {{ 'menu.search'|trans }}</a>
                                 </li>
 
                                     <li class="dropdown">
@@ -92,7 +92,7 @@
                                     </a>
                                     <ul class="dropdown-menu locales" role="menu" aria-labelledby="locales">
                                         {% for locale in locales() %}
-                                            <li {% if app.request.locale == locale.code %}aria-checked="true" class="active"{% else %}aria-checked="false"{% endif %} role="menuitem"><a href="{{ path(app.request.get('_route', 'blog_index'), app.request.get('_route_params', [])|merge({_locale: locale.code})) }}">{{ locale.name|capitalize }} <small>{{ locale.code[0:2] }}</small></a></li>
+                                            <li {% if app.request.locale == locale.code %}aria-checked="true" class="active"{% else %}aria-checked="false"{% endif %} role="menuitem"><a href="{{ path(app.request.get('_route', 'projects_index'), app.request.get('_route_params', [])|merge({_locale: locale.code})) }}">{{ locale.name|capitalize }} <small>{{ locale.code[0:2] }}</small></a></li>
                                         {% endfor %}
                                     </ul>
                                 </li>

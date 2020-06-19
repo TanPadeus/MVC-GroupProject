@@ -11,7 +11,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
- * Defines the form used to create and manipulate project comments.
+ * Defines the form used to create and manipulate projects comments.
  *
  */
 class CommentType extends AbstractType

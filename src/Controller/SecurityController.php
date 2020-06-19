@@ -26,7 +26,7 @@ class SecurityController extends AbstractController
     {
         // if user is already logged in, don't display the login page again
         if ($security->isGranted('ROLE_USER')) {
-            return $this->redirectToRoute('blog_index');
+            return $this->redirectToRoute('projects_index');
         }
 
         $this->saveTargetPath($request->getSession(), 'main', $this->generateUrl('homepage'));

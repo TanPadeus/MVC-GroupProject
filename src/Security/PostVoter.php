@@ -8,7 +8,7 @@ use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Authorization\Voter\Voter;
 
 /**
- * It grants or denies permissions for actions related to project posts (such as
+ * It grants or denies permissions for actions related to projects posts (such as
  * showing, editing and deleting posts).
  *
  */
@@ -39,7 +39,7 @@ class PostVoter extends Voter
         }
 
         // the logic of this voter is pretty simple: if the logged user is the
-        // author of the given project post, grant permission; otherwise, deny it.
+        // author of the given projects post, grant permission; otherwise, deny it.
         return $user === $post->getAuthor();
     }
 }
