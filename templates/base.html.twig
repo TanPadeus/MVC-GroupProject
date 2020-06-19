@@ -5,7 +5,6 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>{% block title %}Symfony Demo application{% endblock %}</title>
-        <link rel="alternate" type="application/rss+xml" title="{{ 'rss.title'|trans }}" href="{{ path('projects_rss') }}">
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -38,16 +37,35 @@
 
                                 {% block header_navigation_links %}
                                     <li>
-                                        <a href="{{ path('projects_index') }}">
+                                        <a href="{{ path('news_index') }}">
                                             <i class="fa fa-home" aria-hidden="true"></i> {{ 'menu.homepage'|trans }}
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('projects_index') }}">
+                                            <i class="fa fa-folder-open" aria-hidden="true"></i> {{ 'menu.projects'|trans }}
                                         </a>
                                     </li>
 
                                     {% if is_granted('ROLE_ADMIN') %}
-                                        <li>
-                                            <a href="{{ path('admin_project_index') }}">
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                                 <i class="fa fa-lock" aria-hidden="true"></i> {{ 'menu.admin'|trans }}
+                                                <span class="caret"></span>
                                             </a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                    <li>
+                                                        <a href="{{ path('admin_news_index') }}">
+                                                            <i class="fa fa-newspaper" aria-hidden="true"></i> {{ 'menu.news'|trans }}
+                                                        </a>
+                                                    </li>
+                                                    <li class="divider"></li>
+                                                    <li>
+                                                        <a href="{{ path('admin_project_index') }}">
+                                                            <i class="fa fa-folder-open" aria-hidden="true"></i> {{ 'menu.projects'|trans }}
+                                                        </a>
+                                                    </li>
+                                            </ul>
                                         </li>
                                     {% endif %}
                                 {% endblock %}

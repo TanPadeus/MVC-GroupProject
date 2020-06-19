@@ -14,10 +14,6 @@
                 <source>not_available</source>
                 <target>Not available</target>
             </trans-unit>
-            <trans-unit id="mit_license">
-                <source>mit_license</source>
-                <target>MIT License</target>
-            </trans-unit>
 
             <trans-unit id="http_error.name">
                 <source>http_error.name</source>
@@ -56,22 +52,6 @@
                 <target><![CDATA[Try loading this page again in some minutes or <a href="{url}">go back to the homepage</a>.]]></target>
             </trans-unit>
 
-            <trans-unit id="title.homepage">
-                <source>title.homepage</source>
-                <target><![CDATA[Welcome to the <strong>Symfony Demo</strong> application]]></target>
-            </trans-unit>
-            <trans-unit id="title.source_code">
-                <source>title.source_code</source>
-                <target>Source code used to render this page</target>
-            </trans-unit>
-            <trans-unit id="title.controller_code">
-                <source>title.controller_code</source>
-                <target>Controller code</target>
-            </trans-unit>
-            <trans-unit id="title.twig_template_code">
-                <source>title.twig_template_code</source>
-                <target>Twig template code</target>
-            </trans-unit>
             <trans-unit id="title.login">
                 <source>title.login</source>
                 <target>Secure Sign in</target>
@@ -109,9 +89,9 @@
                 <source>action.show_post</source>
                 <target>Show post</target>
             </trans-unit>
-            <trans-unit id="action.show_code">
-                <source>action.show_code</source>
-                <target>Show code</target>
+            <trans-unit id="action.show_news">
+                <source>action.show_news</source>
+                <target>Show news</target>
             </trans-unit>
             <trans-unit id="action.edit">
                 <source>action.edit</source>
@@ -121,6 +101,10 @@
                 <source>action.edit_post</source>
                 <target>Edit post</target>
             </trans-unit>
+            <trans-unit id="action.edit_news">
+                <source>action.edit_news</source>
+                <target>Edit news</target>
+            </trans-unit>
             <trans-unit id="action.save">
                 <source>action.save</source>
                 <target>Save changes</target>
@@ -128,6 +112,10 @@
             <trans-unit id="action.delete_post">
                 <source>action.delete_post</source>
                 <target>Delete post</target>
+            </trans-unit>
+            <trans-unit id="action.delete_news">
+                <source>action.delete_news</source>
+                <target>Delete news</target>
             </trans-unit>
             <trans-unit id="delete_post_modal.title">
                 <source>delete_post_modal.title</source>
@@ -141,6 +129,10 @@
                 <source>label.delete_post</source>
                 <target>Delete post</target>
             </trans-unit>
+            <trans-unit id="label.delete_news">
+                <source>label.delete_news</source>
+                <target>Delete news</target>
+            </trans-unit>
             <trans-unit id="label.cancel">
                 <source>label.cancel</source>
                 <target>Cancel</target>
@@ -149,9 +141,17 @@
                 <source>action.create_post</source>
                 <target>Create a new post</target>
             </trans-unit>
+            <trans-unit id="action.create_news">
+                <source>action.create_news</source>
+                <target>Create news</target>
+            </trans-unit>
             <trans-unit id="label.create_post">
                 <source>label.create_post</source>
                 <target>Create post</target>
+            </trans-unit>
+            <trans-unit id="label.create_news">
+                <source>label.create_news</source>
+                <target>Create news</target>
             </trans-unit>
             <trans-unit id="label.save_and_create_new">
                 <source>label.save_and_create_new</source>
@@ -168,14 +168,6 @@
             <trans-unit id="action.sign_in">
                 <source>action.sign_in</source>
                 <target>Sign in</target>
-            </trans-unit>
-            <trans-unit id="action.browse_app">
-                <source>action.browse_app</source>
-                <target>Browse application</target>
-            </trans-unit>
-            <trans-unit id="action.browse_admin">
-                <source>action.browse_admin</source>
-                <target>Browse backend</target>
             </trans-unit>
             <trans-unit id="action.edit_user">
                 <source>action.edit_user</source>
@@ -267,9 +259,13 @@
                 <source>menu.choose_language</source>
                 <target>Choose language</target>
             </trans-unit>
-            <trans-unit id="menu.post_list">
-                <source>menu.post_list</source>
-                <target>Post list</target>
+            <trans-unit id="menu.projects">
+                <source>menu.projects</source>
+                <target>Projects</target>
+            </trans-unit>
+            <trans-unit id="menu.news">
+                <source>menu.news</source>
+                <target>News</target>
             </trans-unit>
             <trans-unit id="menu.back_to_blog">
                 <source>menu.back_to_blog</source>
@@ -294,10 +290,6 @@
             <trans-unit id="menu.logout">
                 <source>menu.logout</source>
                 <target>Logout</target>
-            </trans-unit>
-            <trans-unit id="menu.rss">
-                <source>menu.rss</source>
-                <target>Blog Posts RSS</target>
             </trans-unit>
             <trans-unit id="menu.search">
                 <source>menu.search</source>
@@ -350,35 +342,6 @@
                 <target>User updated successfully!</target>
             </trans-unit>
 
-            <trans-unit id="notification.comment_created">
-                <source>notification.comment_created</source>
-                <target>Your post received a comment!</target>
-            </trans-unit>
-            <trans-unit id="notification.comment_created.description">
-                <source>notification.comment_created.description</source>
-                <target><![CDATA[Your post "{title}" has received a new comment. You can read the comment by following <a href="{link}">this link</a>]]></target>
-            </trans-unit>
-
-            <trans-unit id="help.app_description">
-                <source>help.app_description</source>
-                <target><![CDATA[This is a <strong>demo application</strong> built in the Symfony Framework to illustrate the recommended way of developing Symfony applications.]]></target>
-            </trans-unit>
-            <trans-unit id="help.show_code">
-                <source>help.show_code</source>
-                <target><![CDATA[Click on this button to show the source code of the <strong>Controller</strong> and <strong>template</strong> used to render this page.]]></target>
-            </trans-unit>
-            <trans-unit id="help.browse_app">
-                <source>help.browse_app</source>
-                <target><![CDATA[Browse the <strong>public section</strong> of the demo application.]]></target>
-            </trans-unit>
-            <trans-unit id="help.browse_admin">
-                <source>help.browse_admin</source>
-                <target><![CDATA[Browse the <strong>admin backend</strong> of the demo application.]]></target>
-            </trans-unit>
-            <trans-unit id="help.login_users">
-                <source>help.login_users</source>
-                <target>Try either of the following users</target>
-            </trans-unit>
             <trans-unit id="help.role_user">
                 <source>help.role_user</source>
                 <target>regular user</target>
@@ -386,18 +349,6 @@
             <trans-unit id="help.role_admin">
                 <source>help.role_admin</source>
                 <target>administrator</target>
-            </trans-unit>
-            <trans-unit id="help.reload_fixtures">
-                <source>help.reload_fixtures</source>
-                <target>If these users don't work, reload application fixtures by running this command from the terminal:</target>
-            </trans-unit>
-            <trans-unit id="help.add_user">
-                <source>help.add_user</source>
-                <target>If you want to create new users, run this other command:</target>
-            </trans-unit>
-            <trans-unit id="help.more_information">
-                <source>help.more_information</source>
-                <target><![CDATA[For more information, check out the <a href="https://symfony.com/doc">Symfony doc</a>.]]></target>
             </trans-unit>
             <trans-unit id="help.post_summary">
                 <source>help.post_summary</source>
@@ -419,15 +370,6 @@
             <trans-unit id="info.change_password">
                 <source>info.change_password</source>
                 <target>After changing your password, you will be logged out of the application.</target>
-            </trans-unit>
-
-            <trans-unit id="rss.title">
-                <source>rss.title</source>
-                <target>Symfony Demo blog</target>
-            </trans-unit>
-            <trans-unit id="rss.description">
-                <source>rss.description</source>
-                <target>Most recent posts published on the Symfony Demo blog</target>
             </trans-unit>
 
             <trans-unit id="paginator.previous">
