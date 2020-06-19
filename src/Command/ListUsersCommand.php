@@ -18,7 +18,7 @@ use Symfony\Component\Mime\Email;
 /**
  * A console command that lists all the existing users.
  *
- * To use this command, open a terminal window, enter into your project directory
+ * To use this command, open a terminal window, enter into your projects directory
  * and execute the following:
  *
  *     $ php bin/console app:list-users

@@ -5,10 +5,10 @@
     {{ encore_entry_script_tags('search') }}
 {% endblock %}
 
-{% block body_id 'blog_search' %}
+{% block body_id 'projects_search' %}
 
 {% block main %}
-    <form action="{{ path('blog_search') }}" method="get">
+    <form action="{{ path('projects_search') }}" method="get">
         <div class="form-group">
             <input name="q"
                    class="form-control search-field"

@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block body_id 'blog_post_show' %}
+{% block body_id 'projects_project_show' %}
 
 {% block main %}
     <h1>{{ post.title }}</h1>
@@ -12,11 +12,11 @@
 
     {{ post.content|markdown_to_html|sanitize_html }}
 
-    {{ include('blog/_post_tags.html.twig') }}
+    {{ include('projects/_project_tags.html.twig') }}
 
     <div id="post-add-comment" class="well">
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-            {{ render(controller('App\\Controller\\BlogController::commentForm', {'id': post.id})) }}
+            {{ render(controller('App\\Controller\\ProjectController::commentForm', {'id': post.id})) }}
         {% else %}
             <p>
                 <a class="btn btn-success" href="{{ path('security_login', {'redirect_to': app.request.pathInfo}) }}">
@@ -52,7 +52,7 @@
 {% block sidebar %}
     {% if is_granted('edit', post) %}
         <div class="section">
-            <a class="btn btn-lg btn-block btn-success" href="{{ path('admin_post_edit', {id: post.id}) }}">
+            <a class="btn btn-lg btn-block btn-success" href="{{ path('admin_project_edit', {id: post.id}) }}">
                 <i class="fa fa-edit" aria-hidden="true"></i> {{ 'action.edit_post'|trans }}
             </a>
         </div>

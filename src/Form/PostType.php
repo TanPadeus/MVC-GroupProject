@@ -4,7 +4,7 @@
 
 namespace App\Form;
 
-use App\Entity\Post;
+use App\Entity\Project;
 use App\Form\Type\DateTimePickerType;
 use App\Form\Type\TagsInputType;
 use Symfony\Component\Form\AbstractType;
@@ -16,7 +16,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
 /**
- * Defines the form used to create and manipulate blog posts.
+ * Defines the form used to create and manipulate projects posts.
  *
  */
 class PostType extends AbstractType
@@ -57,7 +57,7 @@ class PostType extends AbstractType
                 'required' => false,
             ])
             ->addEventListener(FormEvents::SUBMIT, function (FormEvent $event) {
-                /** @var Post */
+                /** @var Project */
                 $post = $event->getData();
                 if (null !== $postTitle = $post->getTitle()) {
                     $post->setSlug($this->slugger->slug($postTitle)->lower());
@@ -72,7 +72,7 @@ class PostType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => Post::class,
+            'data_class' => Project::class,
         ]);
     }
 }
