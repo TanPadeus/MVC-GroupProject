@@ -21,7 +21,7 @@
             {{ include('projects/_project_tags.html.twig') }}
         </article>
     {% else %}
-        <div class="well">{{ 'post.no_posts_found'|trans }}</div>
+        <div class="well">{{ 'project.no_projects_found'|trans }}</div>
     {% endfor %}
 
     {% if paginator.hasToPaginate %}
