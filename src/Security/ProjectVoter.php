@@ -12,7 +12,7 @@ use Symfony\Component\Security\Core\Authorization\Voter\Voter;
  * showing, editing and deleting posts).
  *
  */
-class PostVoter extends Voter
+class ProjectVoter extends Voter
 {
     public const DELETE = 'delete';
     public const EDIT = 'edit';

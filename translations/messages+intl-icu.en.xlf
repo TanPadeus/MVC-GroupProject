@@ -385,6 +385,11 @@
                 <target>(current)</target>
             </trans-unit>
 
+            <trans-unit id="title.news_list">
+                <source>title.news_list</source>
+                <target>News list</target>
+            </trans-unit>
+
             <trans-unit id="news.no_news_found">
                 <source>news.no_news_found</source>
                 <target>No news found</target>

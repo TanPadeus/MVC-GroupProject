@@ -4,9 +4,9 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Project;
-use App\Form\PostType;
+use App\Form\ProjectType;
 use App\Repository\ProjectRepository;
-use App\Security\PostVoter;
+use App\Security\ProjectVoter;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -52,7 +52,7 @@ class ProjectController extends AbstractController
         $post = new Project();
         $post->setAuthor($this->getUser());
 
-        $form = $this->createForm(PostType::class, $post)
+        $form = $this->createForm(ProjectType::class, $post)
             ->add('saveAndCreateNew', SubmitType::class);
 
         $form->handleRequest($request);
@@ -86,7 +86,7 @@ class ProjectController extends AbstractController
     public function show(Project $post): Response
     {
 
-        $this->denyAccessUnlessGranted(PostVoter::SHOW, $post, 'Posts can only be shown to their authors.');
+        $this->denyAccessUnlessGranted(ProjectVoter::SHOW, $post, 'Posts can only be shown to their authors.');
 
         return $this->render('admin/projects/show.html.twig', [
             'post' => $post,
@@ -101,7 +101,7 @@ class ProjectController extends AbstractController
      */
     public function edit(Request $request, Project $post): Response
     {
-        $form = $this->createForm(PostType::class, $post);
+        $form = $this->createForm(ProjectType::class, $post);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

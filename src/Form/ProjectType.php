@@ -19,7 +19,7 @@ use Symfony\Component\String\Slugger\SluggerInterface;
  * Defines the form used to create and manipulate projects posts.
  *
  */
-class PostType extends AbstractType
+class ProjectType extends AbstractType
 {
     private $slugger;
 

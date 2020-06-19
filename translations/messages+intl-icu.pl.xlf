@@ -269,6 +269,10 @@
                 <target>Następna</target>
             </trans-unit>
 
+            <trans-unit id="title.news_list">
+                <source>title.news_list</source>
+                <target>Lista artykułów</target>
+            </trans-unit>
             <trans-unit id="help.project_publication">
                 <source>help.project_publication</source>
                 <target>Ustaw datę w przyszłości by zakolejkować dodanie postu.</target>
