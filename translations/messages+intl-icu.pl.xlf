@@ -19,13 +19,13 @@
                 <source>title.login</source>
                 <target>Bezpieczne logowanie</target>
             </trans-unit>
-            <trans-unit id="title.post_list">
-                <source>title.post_list</source>
-                <target>Lista artykułów</target>
+            <trans-unit id="title.project_list">
+                <source>title.project_list</source>
+                <target>Lista projektów</target>
             </trans-unit>
-            <trans-unit id="title.edit_post">
-                <source>title.edit_post</source>
-                <target>Edytuj artykuł #{id, number}</target>
+            <trans-unit id="title.edit_project">
+                <source>title.edit_project</source>
+                <target>Edytuj projekt #{id, number}</target>
             </trans-unit>
             <trans-unit id="title.add_comment">
                 <source>title.add_comment</source>
@@ -42,15 +42,15 @@
             </trans-unit>
             <trans-unit id="action.show_news">
                 <source>action.show_news</source>
-                <target>Pokaż artykuł</target>
+                <target>Pokaż projekt</target>
             </trans-unit>
             <trans-unit id="action.edit">
                 <source>action.edit</source>
                 <target>Edytuj</target>
             </trans-unit>
-            <trans-unit id="action.edit_post">
-                <source>action.edit_post</source>
-                <target>Edytuj artykuł</target>
+            <trans-unit id="action.edit_project">
+                <source>action.edit_project</source>
+                <target>Edytuj projekt</target>
             </trans-unit>
             <trans-unit id="action.edit_news">
                 <source>action.edit_news</source>
@@ -60,24 +60,24 @@
                 <source>action.save</source>
                 <target>Zapisz</target>
             </trans-unit>
-            <trans-unit id="action.delete_post">
-                <source>action.delete_post</source>
-                <target>Usuń artykuł</target>
+            <trans-unit id="action.delete_project">
+                <source>action.delete_project</source>
+                <target>Usuń projekt</target>
             </trans-unit>
             <trans-unit id="action.delete_news">
                 <source>action.delete_news</source>
                 <target>Usuń artykuł</target>
             </trans-unit>
-            <trans-unit id="delete_post_modal.title">
-                <source>delete_post_modal.title</source>
-                <target>Czy na pewno chcesz usunąć ten artykuł?</target>
+            <trans-unit id="delete_project_modal.title">
+                <source>delete_project_modal.title</source>
+                <target>Czy na pewno chcesz usunąć ten project?</target>
             </trans-unit>
-            <trans-unit id="delete_post_modal.body">
-                <source>delete_post_modal.body</source>
+            <trans-unit id="delete_project_modal.body">
+                <source>delete_project_modal.body</source>
                 <target>Ta akcja nie może zostać cofnięta.</target>
             </trans-unit>
-            <trans-unit id="label.delete_post">
-                <source>label.delete_post</source>
+            <trans-unit id="label.delete_project">
+                <source>label.delete_project</source>
                 <target>Usuń projekt</target>
             </trans-unit>
             <trans-unit id="label.delete_news">
@@ -88,17 +88,17 @@
                 <source>label.cancel</source>
                 <target>Anuluj</target>
             </trans-unit>
-            <trans-unit id="action.create_post">
-                <source>action.create_post</source>
-                <target>Dodaj nowy artykuł</target>
+            <trans-unit id="action.create_project">
+                <source>action.create_project</source>
+                <target>Dodaj nowy project</target>
             </trans-unit>
             <trans-unit id="action.create_news">
                 <source>action.create_news</source>
                 <target>Dodaj nowy artykuł</target>
             </trans-unit>
-            <trans-unit id="label.create_post">
-                <source>label.create_post</source>
-                <target>Dodaj artykuł</target>
+            <trans-unit id="label.create_project">
+                <source>label.create_project</source>
+                <target>Dodaj projekt</target>
             </trans-unit>
             <trans-unit id="label.create_news">
                 <source>label.create_news</source>
@@ -169,9 +169,9 @@
                 <source>label.actions</source>
                 <target>Akcje</target>
             </trans-unit>
-            <trans-unit id="title.post_new">
-                <source>title.post_new</source>
-                <target>Tworzenie nowego artykułu</target>
+            <trans-unit id="title.project_new">
+                <source>title.project_new</source>
+                <target>Tworzenie nowego projektu</target>
             </trans-unit>
             <trans-unit id="action.edit_contents">
                 <source>action.edit_contents</source>
@@ -190,9 +190,9 @@
                 <source>menu.news</source>
                 <target>Artykuły</target>
             </trans-unit>
-            <trans-unit id="menu.back_to_blog">
-                <source>menu.back_to_blog</source>
-                <target>Powrót do bloga</target>
+            <trans-unit id="menu.back_to_projects">
+                <source>menu.back_to_projects</source>
+                <target>Powrót do projektów</target>
             </trans-unit>
             <trans-unit id="menu.homepage">
                 <source>menu.homepage</source>
@@ -219,37 +219,37 @@
                 <target>Szukaj</target>
             </trans-unit>
 
-            <trans-unit id="post.to_publish_a_comment">
-                <source>post.to_publish_a_comment</source>
+            <trans-unit id="project.to_publish_a_comment">
+                <source>project.to_publish_a_comment</source>
                 <target>aby dodać komentarz</target>
             </trans-unit>
-            <trans-unit id="post.num_comments">
-                <source>post.num_comments</source>
+            <trans-unit id="project.num_comments">
+                <source>project.num_comments</source>
                 <target>{count, plural, one {# komentarz} many {# komentarze} other {# komentarzy}}</target>
             </trans-unit>
-            <trans-unit id="post.commented_on">
-                <source>post.commented_on</source>
+            <trans-unit id="project.commented_on">
+                <source>project.commented_on</source>
                 <target>skomentował</target>
             </trans-unit>
-            <trans-unit id="post.no_comments">
-                <source>post.no_comments</source>
+            <trans-unit id="project.no_comments">
+                <source>project.no_comments</source>
                 <target>Bądź pierwszym, który skomentuje.</target>
             </trans-unit>
-            <trans-unit id="post.no_posts_found">
-                <source>post.no_posts_found</source>
-                <target>Brak artykułów</target>
+            <trans-unit id="project.no_projects_found">
+                <source>project.no_projects_found</source>
+                <target>Brak projektów</target>
             </trans-unit>
-            <trans-unit id="post.created_successfully">
-                <source>post.created_successfully</source>
+            <trans-unit id="project.created_successfully">
+                <source>project.created_successfully</source>
                 <target>Artykuł został utworzony!</target>
             </trans-unit>
-            <trans-unit id="post.updated_successfully">
-                <source>post.updated_successfully</source>
-                <target>Artykuł został zaktualizowany!</target>
+            <trans-unit id="project.updated_successfully">
+                <source>project.updated_successfully</source>
+                <target>Projekt został zaktualizowany!</target>
             </trans-unit>
-            <trans-unit id="post.deleted_successfully">
-                <source>post.deleted_successfully</source>
-                <target>Artykuł został usunięty!</target>
+            <trans-unit id="project.deleted_successfully">
+                <source>project.deleted_successfully</source>
+                <target>Projekt został usunięty!</target>
             </trans-unit>
             <trans-unit id="help.role_user">
                 <source>help.role_user</source>
@@ -267,6 +267,46 @@
             <trans-unit id="paginator.next">
                 <source>paginator.next</source>
                 <target>Następna</target>
+            </trans-unit>
+
+            <trans-unit id="help.project_publication">
+                <source>help.project_publication</source>
+                <target>Ustaw datę w przyszłości by zakolejkować dodanie postu.</target>
+            </trans-unit>
+
+            <trans-unit id="help.project_summary">
+                <source>help.project_summary</source>
+                <target>Podsumowania nie mogą zawierać Markdowna HTMLa; jedynie czysty tekst.</target>
+            </trans-unit>
+
+            <trans-unit id="help.project_content">
+                <source>help.project_content</source>
+                <target>Użyj Markdowna by sformatować zawartość projektu. HTML jest również dozwolony.</target>
+            </trans-unit>
+
+            <trans-unit id="action.show_project">
+                <source>action.show_project</source>
+                <target>Pokaż projekt</target>
+            </trans-unit>
+
+            <trans-unit id="help.comment_content">
+                <source>help.comment_content</source>
+                <target>Komentarze niezgodne z regułami strony będą usuwane.</target>
+            </trans-unit>
+
+            <trans-unit id="news.no_news_found">
+                <source>news.no_news_found</source>
+                <target>Brak artykułów</target>
+            </trans-unit>
+
+            <trans-unit id="menu.choose_language">
+                <source>menu.choose_language</source>
+                <target>Wybierz język</target>
+            </trans-unit>
+
+            <trans-unit id="paginator.current">
+                <source>paginator.current</source>
+                <target>(obecnie)</target>
             </trans-unit>
         </body>
     </file>
