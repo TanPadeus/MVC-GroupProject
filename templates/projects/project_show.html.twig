@@ -22,20 +22,20 @@
                 <a class="btn btn-success" href="{{ path('security_login', {'redirect_to': app.request.pathInfo}) }}">
                     <i class="fa fa-sign-in" aria-hidden="true"></i> {{ 'action.sign_in'|trans }}
                 </a>
-                {{ 'post.to_publish_a_comment'|trans }}
+                {{ 'project.to_publish_a_comment'|trans }}
             </p>
         {% endif %}
     </div>
 
     <h3>
-        <i class="fa fa-comments" aria-hidden="true"></i> {{ 'post.num_comments'|trans({ 'count': post.comments|length }) }}
+        <i class="fa fa-comments" aria-hidden="true"></i> {{ 'project.num_comments'|trans({ 'count': post.comments|length }) }}
     </h3>
 
     {% for comment in post.comments %}
         <div class="row post-comment">
             <a name="comment_{{ comment.id }}"></a>
             <h4 class="col-sm-3">
-                <strong>{{ comment.author.fullName }}</strong> {{ 'post.commented_on'|trans }}
+                <strong>{{ comment.author.fullName }}</strong> {{ 'project.commented_on'|trans }}
                 <strong>{{ comment.publishedAt|format_datetime('medium', 'short', '', 'UTC') }}</strong>
             </h4>
             <div class="col-sm-9">
@@ -44,7 +44,7 @@
         </div>
     {% else %}
         <div class="post-comment">
-            <p>{{ 'post.no_comments'|trans }}</p>
+            <p>{{ 'project.no_comments'|trans }}</p>
         </div>
     {% endfor %}
 {% endblock %}
@@ -53,7 +53,7 @@
     {% if is_granted('edit', post) %}
         <div class="section">
             <a class="btn btn-lg btn-block btn-success" href="{{ path('admin_project_edit', {id: post.id}) }}">
-                <i class="fa fa-edit" aria-hidden="true"></i> {{ 'action.edit_post'|trans }}
+                <i class="fa fa-edit" aria-hidden="true"></i> {{ 'action.edit_project'|trans }}
             </a>
         </div>
     {% endif %}

@@ -3,7 +3,7 @@
 {% block body_id 'admin_project_edit' %}
 
 {% block main %}
-    <h1>{{ 'title.edit_post'|trans({'%id%': post.id}) }}</h1>
+    <h1>{{ 'title.edit_project'|trans({'%id%': post.id}) }}</h1>
 
     {{ include('admin/projects/_form.html.twig', {
         form: form,
@@ -15,7 +15,7 @@
 {% block sidebar %}
     <div class="section">
         <a href="{{ path('admin_project_show', {id: post.id}) }}" class="btn btn-lg btn-block btn-success">
-            <i class="fa fa-eye" aria-hidden="true"></i> {{ 'action.show_post'|trans }}
+            <i class="fa fa-eye" aria-hidden="true"></i> {{ 'action.show_project'|trans }}
         </a>
     </div>
 

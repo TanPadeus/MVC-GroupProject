@@ -40,17 +40,17 @@ class ProjectType extends AbstractType
                 'label' => 'label.title',
             ])
             ->add('summary', TextareaType::class, [
-                'help' => 'help.post_summary',
+                'help' => 'help.project_summary',
                 'label' => 'label.summary',
             ])
             ->add('content', null, [
                 'attr' => ['rows' => 20],
-                'help' => 'help.post_content',
+                'help' => 'help.project_content',
                 'label' => 'label.content',
             ])
             ->add('publishedAt', DateTimePickerType::class, [
                 'label' => 'label.published_at',
-                'help' => 'help.post_publication',
+                'help' => 'help.project_publication',
             ])
             ->add('tags', TagsInputType::class, [
                 'label' => 'label.tags',
