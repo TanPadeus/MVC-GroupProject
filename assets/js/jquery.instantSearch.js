@@ -28,7 +28,7 @@
     InstantSearch.DEFAULTS = {
         minQueryLength: 2,
         limit: 10,
-        delay: 500,
+        delay: 10,
         noResultsMessage: 'No results found',
         itemTemplate: '\
                 <article class="post">\

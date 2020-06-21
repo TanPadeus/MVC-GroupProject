@@ -28,12 +28,11 @@ class ProjectController extends AbstractController
 {
     /**
      * @Route("/", defaults={"page": "1", "_format"="html"}, methods="GET", name="projects_index")
-     * @Route("/rss.xml", defaults={"page": "1", "_format"="xml"}, methods="GET", name="projects_rss")
      * @Route("/page/{page<[1-9]\d*>}", defaults={"_format"="html"}, methods="GET", name="projects_index_paginated")
      * @Cache(smaxage="10")
      *
      */
-    public function index(Request $request, int $page, string $_format, ProjectRepository $posts, TagRepository $tags): Response
+    public function index(Request $request, int $page, ProjectRepository $posts, TagRepository $tags): Response
     {
         $tag = null;
         if ($request->query->has('tag')) {
@@ -41,10 +40,7 @@ class ProjectController extends AbstractController
         }
         $latestPosts = $posts->findLatest($page, $tag);
 
-        // Every template name also has two extensions that specify the format and
-        // engine for that template.
-        // See https://symfony.com/doc/current/templates.html#template-naming
-        return $this->render('projects/index.'.$_format.'.twig', [
+        return $this->render('projects/index.html.twig', [
             'paginator' => $latestPosts,
         ]);
     }
