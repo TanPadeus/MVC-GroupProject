@@ -42,7 +42,7 @@
             </trans-unit>
             <trans-unit id="action.show_news">
                 <source>action.show_news</source>
-                <target>Pokaż projekt</target>
+                <target>Pokaż artykuł</target>
             </trans-unit>
             <trans-unit id="action.edit">
                 <source>action.edit</source>
@@ -239,18 +239,6 @@
                 <source>project.no_projects_found</source>
                 <target>Brak projektów</target>
             </trans-unit>
-            <trans-unit id="project.created_successfully">
-                <source>project.created_successfully</source>
-                <target>Artykuł został utworzony!</target>
-            </trans-unit>
-            <trans-unit id="project.updated_successfully">
-                <source>project.updated_successfully</source>
-                <target>Projekt został zaktualizowany!</target>
-            </trans-unit>
-            <trans-unit id="project.deleted_successfully">
-                <source>project.deleted_successfully</source>
-                <target>Projekt został usunięty!</target>
-            </trans-unit>
             <trans-unit id="help.role_user">
                 <source>help.role_user</source>
                 <target>użytkownik</target>
@@ -312,6 +300,134 @@
                 <source>paginator.current</source>
                 <target>(obecnie)</target>
             </trans-unit>
+
+            <trans-unit id="project.search_for">
+                <source>project.search_for</source>
+                <target>Szukaj</target>
+            </trans-unit>
+
+            <trans-unit id="project.search_no_results">
+                <source>project.search_no_results</source>
+                <target>Brak wyników</target>
+            </trans-unit>
+
+            <trans-unit id="label.tags">
+                <source>label.tags</source>
+                <target>Tagi</target>
+            </trans-unit>
+
+            <trans-unit id="title.news_new">
+                <source>title.news_new</source>
+                <target>Nowy artykuł</target>
+            </trans-unit>
+
+            <trans-unit id="help.news_summary">
+                <source>help.news_summary</source>
+                <target>Podsumowania nie mogą zawierać Markdowna HTMLa; jedynie czysty tekst.</target>
+            </trans-unit>
+
+            <trans-unit id="help.news_content">
+                <source>help.news_content</source>
+                <target>Użyj Markdowna by sformatować zawartość projektu. HTML jest również dozwolony.</target>
+            </trans-unit>
+
+            <trans-unit id="help.news_publication">
+                <source>help.news_publication</source>
+                <target>Ustaw datę w przyszłości by zakolejkować dodanie postu.</target>
+            </trans-unit>
+
+            <trans-unit id="title.edit_user">
+                <source>title.edit_user</source>
+                <target>Edytuj dane</target>
+            </trans-unit>
+
+            <trans-unit id="label.fullname">
+                <source>label.fullname</source>
+                <target>Imię i nazwisko</target>
+            </trans-unit>
+
+            <trans-unit id="label.email">
+                <source>label.email</source>
+                <target>Email</target>
+            </trans-unit>
+
+            <trans-unit id="action.change_password">
+                <source>action.change_password</source>
+                <target>Zmień hasło</target>
+            </trans-unit>
+
+            <trans-unit id="title.change_password">
+                <source>title.change_password</source>
+                <target>Zmień hasło</target>
+            </trans-unit>
+
+            <trans-unit id="info.change_password">
+                <source>info.change_password</source>
+                <target>Po zmianie hasła zostaniesz wylogowany z aplikacji.</target>
+            </trans-unit>
+
+            <trans-unit id="label.current_password">
+                <source>label.current_password</source>
+                <target>Stare hasło</target>
+            </trans-unit>
+
+            <trans-unit id="label.new_password">
+                <source>label.new_password</source>
+                <target>Nowe hasło</target>
+            </trans-unit>
+
+            <trans-unit id="label.new_password_confirm">
+                <source>label.new_password_confirm</source>
+                <target>Potwierdź nowe hasło</target>
+            </trans-unit>
+
+            <trans-unit id="action.edit_user">
+                <source>action.edit_user</source>
+                <target>Edytuj użytkownika</target>
+            </trans-unit>
+
+
+            <trans-unit id="delete_news_modal.title">
+                <source>delete_news_modal.title</source>
+                <target>Czy na pewno chcesz usunąć ten artykuł?</target>
+            </trans-unit>
+            <trans-unit id="delete_news_modal.body">
+                <source>delete_news_modal.body</source>
+                <target>Ta akcja nie może zostać cofnięta.</target>
+            </trans-unit>
+
+            <trans-unit id="title.edit_news">
+                <source>title.edit_news</source>
+                <target>Edytuj artykuł</target>
+            </trans-unit>
+
+
+            <trans-unit id="project.created_successfully">
+                <source>project.created_successfully</source>
+                <target>Projekt dodany</target>
+            </trans-unit>
+            <trans-unit id="project.updated_successfully">
+                <source>project.updated_successfully</source>
+                <target>Projekt zaktualizowany</target>
+            </trans-unit>
+            <trans-unit id="project.deleted_successfully">
+                <source>project.deleted_successfully</source>
+                <target>Projekt usunięty</target>
+            </trans-unit>
+
+            <trans-unit id="news.created_successfully">
+                <source>news.created_successfully</source>
+                <target>Artykuł dodany</target>
+            </trans-unit>
+            <trans-unit id="news.updated_successfully">
+                <source>news.updated_successfully</source>
+                <target>Artykuł zaktualizowany</target>
+            </trans-unit>
+            <trans-unit id="news.deleted_successfully">
+                <source>news.deleted_successfully</source>
+                <target>Artykuł usunięty</target>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>

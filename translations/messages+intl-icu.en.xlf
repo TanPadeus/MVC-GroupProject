@@ -316,18 +316,6 @@
                 <source>project.no_projects_found</source>
                 <target>No projects found.</target>
             </trans-unit>
-            <trans-unit id="project.created_successfully">
-                <source>project.created_successfully</source>
-                <target>project created successfully!</target>
-            </trans-unit>
-            <trans-unit id="project.updated_successfully">
-                <source>project.updated_successfully</source>
-                <target>project updated successfully!</target>
-            </trans-unit>
-            <trans-unit id="project.deleted_successfully">
-                <source>project.deleted_successfully</source>
-                <target>project deleted successfully!</target>
-            </trans-unit>
             <trans-unit id="project.search_for">
                 <source>project.search_for</source>
                 <target>Search for...</target>
@@ -394,6 +382,67 @@
                 <source>news.no_news_found</source>
                 <target>No news found</target>
             </trans-unit>
+
+            <trans-unit id="title.news_new">
+                <source>title.news_new</source>
+                <target>New news</target>
+            </trans-unit>
+
+            <trans-unit id="help.news_summary">
+                <source>help.news_summary</source>
+                <target>Summaries can't contain Markdown or HTML contents; only plain text.</target>
+            </trans-unit>
+
+            <trans-unit id="help.news_content">
+                <source>help.news_content</source>
+                <target>Use Markdown to format the blog project contents. HTML is allowed too.</target>
+            </trans-unit>
+
+            <trans-unit id="help.news_publication">
+                <source>help.news_publication</source>
+                <target>Set the date in the future to schedule the blog project publication.</target>
+            </trans-unit>
+
+            <trans-unit id="delete_news_modal.title">
+                <source>delete_news_modal.title</source>
+                <target>Are you sure you want to delete this news?</target>
+            </trans-unit>
+            <trans-unit id="delete_news_modal.body">
+                <source>delete_news_modal.body</source>
+                <target>This action cannot be undone.</target>
+            </trans-unit>
+
+            <trans-unit id="title.edit_news">
+                <source>title.edit_news</source>
+                <target>Edit news</target>
+            </trans-unit>
+
+            <trans-unit id="project.created_successfully">
+                <source>project.created_successfully</source>
+                <target>Project added</target>
+            </trans-unit>
+            <trans-unit id="project.updated_successfully">
+                <source>project.updated_successfully</source>
+                <target>Project updated</target>
+            </trans-unit>
+            <trans-unit id="project.deleted_successfully">
+                <source>project.deleted_successfully</source>
+                <target>Project deleted</target>
+            </trans-unit>
+
+            <trans-unit id="news.created_successfully">
+                <source>news.created_successfully</source>
+                <target>News added</target>
+            </trans-unit>
+            <trans-unit id="news.updated_successfully">
+                <source>news.updated_successfully</source>
+                <target>News updated</target>
+            </trans-unit>
+            <trans-unit id="news.deleted_successfully">
+                <source>news.deleted_successfully</source>
+                <target>News deleted</target>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>
