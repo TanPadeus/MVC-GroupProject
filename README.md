@@ -9,7 +9,8 @@ Członkowie grupy: Moryń Maciej, Wenda Artur
 	* ii. [Kontrolery](#kontrolery)
 	* iii. [Modele](#modele)
 		+ [Comment](#comment)
-		+ [Post](#post)
+		+ [Project](#project)
+		+ [News](#news)
 		+ [Tag](#tag)
 		+ [User](#user)
 4. [Bazy Danych](#baza-danych)
@@ -41,16 +42,25 @@ przypisanych do poszczególnych projektów.
 # Warstwy MVC
 
 ## Widoki
-* Widok index, na stronie głównej newsy dotyczące projektów, możliwość przejścia do stron z listą projektów (z wyszukiwarką tagów),
-	panelu logowania się oraz do wyszukiwarki projektów po nazwie
+* 	Widok index, na stronie głównej newsy dotyczące projektów, możliwość przejścia do stron z listą projektów (z wyszukiwarką tagów),
+	oraz newsów, panelu logowania się oraz do wyszukiwarki projektów po nazwie
 *	Widok search, czyli strona do wyszukiwania projektów po ich nazwie
-*	Widok blog, czyli strona z listą projektów wraz z ich krótkimi opisami oraz tagami; możliwość zawężenia listy poprzez
+*	Widok projects, czyli strona z listą projektów wraz z ich krótkimi opisami oraz tagami; możliwość zawężenia listy poprzez
 	wybranie odpowiednich tagów.
+*	Panel administracyjny newsów, lista newsów wraz z możliwością dodania, modyfikacji i usunięcia newsa
+*	Panel administracyjny projektów, lista projektów wraz z możliwością dodania, modyfikacji i usunięcia projektu
+*	Widok logowania, czyli logowanie się na stronę
+*	Widok edycji danych, czyli możliwośc edycji danych użytkownika
+*	Widok edycji projektu, gdzie można edytować i usunąć projekt
+*	Widok edycji newsa, gdzie można edytować i usunąć news
+*	Widok projektu
+*	Widok newsa
 	
 ## Kontrolery
-- BlogController, pozwalający dodawać i wyszukiwać posty, posiada wersje admina, która zezwala również na edycję i usuwanie postów
-- SecurityController, obsługuje logowanie i wylogowywanie się na stronie
-- UserController, zarządza wszystkimi możliwościami edycji użytkownika
+- 	ProjectController, pozwalający wylistować, pokazać, wyszukać projekt oraz dodać/wyświetlić komentarze; posiada wersje admina, w 	której można dodać, edytować i usunąć projekt	
+- 	NewsController, pozwalający wylistować i pokazać newsa; posiada wersje admina, w której można dodać, edytować i usunąć projekt	
+- 	SecurityController, obsługuje logowanie i wylogowywanie się na stronie
+- 	UserController, zarządza wszystkimi możliwościami edycji użytkownika
 
 ## Modele
 ### Comment
@@ -70,7 +80,7 @@ przypisanych do poszczególnych projektów.
 - getPost(): Post?
 - setPost(): void
 
-### Post
+### Project
 - id: int
 - title: string
 - slug: string
@@ -98,6 +108,27 @@ przypisanych do poszczególnych projektów.
 - addTag(): void
 - removeTag(): void
 - getTags(): Collection
+
+### News
+- id: int
+- title: string
+- slug: string
+- summary: string 
+- content: string
+- publishedAt: DateTime
+- author: User
+- getTitle(): string?
+- setTitle(): void
+- getSlug(): string?
+- setSlug(): void
+- getContent(): string?
+- setContent(): void
+- getPublishedAt(): DateTime
+- setPublishedAt(): void
+- getAuthor(): User?
+- setAuthor(): void
+- getSummary(): string?
+- setSummary(): void
 
 ### Tag
 - id: int
