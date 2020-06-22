@@ -63,7 +63,7 @@ class ProjectController extends AbstractController
             $em->flush();
 
 
-            $this->addFlash('success', 'post.created_successfully');
+            $this->addFlash('success', 'project.created_successfully');
 
             if ($form->get('saveAndCreateNew')->isClicked()) {
                 return $this->redirectToRoute('admin_project_new');
@@ -107,7 +107,7 @@ class ProjectController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            $this->addFlash('success', 'post.updated_successfully');
+            $this->addFlash('success', 'project.updated_successfully');
 
             return $this->redirectToRoute('admin_project_edit', ['id' => $post->getId()]);
         }
@@ -136,7 +136,7 @@ class ProjectController extends AbstractController
         $em->remove($post);
         $em->flush();
 
-        $this->addFlash('success', 'post.deleted_successfully');
+        $this->addFlash('success', 'project.deleted_successfully');
 
         return $this->redirectToRoute('admin_project_index');
     }
