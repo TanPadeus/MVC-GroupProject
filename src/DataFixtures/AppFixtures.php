@@ -72,6 +72,7 @@ class AppFixtures extends Fixture
             $post->setPublishedAt($publishedAt);
             $post->setAuthor($author);
             $post->addTag(...$tags);
+            $post->setImage(null);
 
             foreach (range(1, 5) as $i) {
                 $comment = new Comment();

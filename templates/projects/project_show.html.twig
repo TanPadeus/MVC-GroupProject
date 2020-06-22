@@ -4,11 +4,11 @@
 
 {% block main %}
     <h1>{{ post.title }}</h1>
-
     <p class="post-metadata">
         <span class="metadata"><i class="fa fa-calendar"></i> {{ post.publishedAt|format_datetime('long', 'medium', '', 'UTC') }}</span>
         <span class="metadata"><i class="fa fa-user"></i> {{ post.author.fullName }}</span>
     </p>
+    <div style="display: flex; justify-content: center; margin-bottom: 10px;"><img style="max-width: 90%; height: auto;" src="{{ vich_uploader_asset(post,'imageFile') }}" alt="{{ post.image }}" /></div>
 
     {{ post.content|markdown_to_html|sanitize_html }}
 
@@ -50,12 +50,16 @@
 {% endblock %}
 
 {% block sidebar %}
+
+    {% if post.projectFilesName %}
+            <a class="btn btn-lg btn-block btn-info" href="{{ vich_uploader_asset(post,'projectFiles') }}" download>
+                <i class="fa fa-download" aria-hidden="true"></i> {{ 'action.download'|trans }}
+            </a>
+    {% endif %}
     {% if is_granted('edit', post) %}
-        <div class="section">
             <a class="btn btn-lg btn-block btn-success" href="{{ path('admin_project_edit', {id: post.id}) }}">
                 <i class="fa fa-edit" aria-hidden="true"></i> {{ 'action.edit_project'|trans }}
             </a>
-        </div>
     {% endif %}
 
 

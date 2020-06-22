@@ -1,13 +1,13 @@
 import '../scss/admin.scss';
-import 'eonasdan-bootstrap-datetimepicker';
+import "tempusdominus-bootstrap-4"
 import 'typeahead.js';
 import Bloodhound from "bloodhound-js";
 import 'bootstrap-tagsinput';
+import bsCustomFileInput from "bs-custom-file-input";
 
 $(function() {
-    // Datetime picker initialization.
-    // See https://eonasdan.github.io/bootstrap-datetimepicker/
     $('[data-toggle="datetimepicker"]').datetimepicker({
+        format: 'YYYY-MM-DDTHH:mm:ss',
         icons: {
             time: 'fa fa-clock-o',
             date: 'fa fa-calendar',
@@ -61,3 +61,7 @@ $(document).on('submit', 'form[data-confirmation]', function (event) {
             .modal('show');
     }
 });
+
+$(document).ready(function () {
+    bsCustomFileInput.init()
+})

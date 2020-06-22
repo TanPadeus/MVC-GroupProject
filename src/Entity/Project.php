@@ -7,11 +7,15 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
-
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\HttpFoundation\File\File;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProjectRepository")
+ * @Vich\Uploadable
  * @ORM\Table(name="projects")
  * @UniqueEntity(fields={"slug"}, errorPath="title", message="post.slug_unique")
+ *
  *
  * Defines the properties of the Project entity to represent the projects posts.
  *
@@ -63,6 +67,33 @@ class Project
     private $content;
 
     /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\NotBlank(allowNull = true)
+     * @var string|null
+     */
+    private $image;
+
+    /**
+     * @Vich\UploadableField(mapping="project_image", fileNameProperty="image")
+     * @var File|null
+     */
+    private $imageFile;
+
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\NotBlank(allowNull = true)
+     * @var string|null
+     */
+    private $projectFilesName;
+
+    /**
+     * @Vich\UploadableField(mapping="project_files", fileNameProperty="projectFilesName")
+     * @var File|null
+     */
+    private $projectFiles;
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(type="datetime")
@@ -100,11 +131,79 @@ class Project
      */
     private $tags;
 
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     *
+     * @var \DateTimeInterface|null
+     */
+    private $updatedAt;
+
     public function __construct()
     {
         $this->publishedAt = new \DateTime();
         $this->comments = new ArrayCollection();
         $this->tags = new ArrayCollection();
+    }
+
+    /**
+     * @param File|UploadedFile|null $imageFile
+     * @throws \Exception
+     */
+    public function setImageFile(?File $imageFile = null): void
+    {
+        $this->imageFile = $imageFile;
+
+        if (null !== $imageFile) {
+            // It is required that at least one field changes if you are using doctrine
+            // otherwise the event listeners won't be called and the file is lost
+            $this->updatedAt = new \DateTimeImmutable();
+        }
+    }
+
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
+
+    public function setImage(?String $image): void
+    {
+        $this->image = $image;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function getProjectFilesName(): ?string
+    {
+        return $this->projectFilesName;
+    }
+
+
+    public function setProjectFilesName(?string $projectFilesName): void
+    {
+        $this->projectFilesName = $projectFilesName;
+    }
+
+
+    public function getProjectFiles(): ?File
+    {
+        return $this->projectFiles;
+    }
+
+    /**
+     * @param File|UploadedFile|null $projectFiles
+     * @throws \Exception
+     */
+    public function setProjectFiles(?File $projectFiles): void
+    {
+        $this->projectFiles = $projectFiles;
+        if (null !== $projectFiles) {
+            // It is required that at least one field changes if you are using doctrine
+            // otherwise the event listeners won't be called and the file is lost
+            $this->updatedAt = new \DateTimeImmutable();
+        }
     }
 
     public function getId(): ?int

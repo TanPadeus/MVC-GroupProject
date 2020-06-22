@@ -8,7 +8,8 @@ parameters:
     # This parameter defines the codes of the locales (languages) enabled in the application
     app_locales: en|pl
     app.notifications.email_sender: anonymous@example.com
-
+    app.path.project_images: /uploads/images
+    app.path.project_files: /uploads/projectFiles
 services:
     # default configuration for services in *this* file
     _defaults:
