@@ -14,6 +14,8 @@ use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\String\Slugger\SluggerInterface;
+use Vich\UploaderBundle\Form\Type\VichImageType;
+use Vich\UploaderBundle\Form\Type\VichFileType;
 
 /**
  * Defines the form used to create and manipulate projects posts.
@@ -47,6 +49,16 @@ class ProjectType extends AbstractType
                 'attr' => ['rows' => 20],
                 'help' => 'help.project_content',
                 'label' => 'label.content',
+            ])
+            ->add('imageFile', VichImageType::class, [
+                'label' => 'Image',
+                'required' => false,
+            ])
+            ->add('projectFiles', VichFileType::class, [
+                'label' => 'Upload project files to enable download',
+                'required' => false,
+                'download_label' => static function (Project $project) {
+                    return $project->getProjectFilesName();}
             ])
             ->add('publishedAt', DateTimePickerType::class, [
                 'label' => 'label.published_at',

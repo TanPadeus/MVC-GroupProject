@@ -109,6 +109,10 @@
                 <source>action.save</source>
                 <target>Save changes</target>
             </trans-unit>
+            <trans-unit id="action.download">
+                <source>action.download</source>
+                <target>Download</target>
+            </trans-unit>
             <trans-unit id="action.delete_project">
                 <source>action.delete_project</source>
                 <target>Delete project</target>

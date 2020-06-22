@@ -1,9 +1,9 @@
 
 
 {% block date_time_picker_widget %}
-    <div class="input-group date" data-toggle="datetimepicker">
-        {{ block('datetime_widget') }}
-        <span class="input-group-addon">
+    <div class="input-group date" id="datetimepicker" data-toggle="datetimepicker" data-target-input="nearest">
+        {{ form_widget(form,{'attr': {'data-toggle': 'datetimepicker', 'data-target':'#datetimepicker' , 'class':'datetimepicker-input'}})}}
+        <span class="input-group-addon" data-target="#datetimepicker" data-toggle="datetimepicker">
             <span class="fa fa-calendar" aria-hidden="true"></span>
         </span>
     </div>
@@ -17,3 +17,38 @@
         </span>
     </div>
 {% endblock %}
+
+{%- block vich_image_widget -%}
+    <div class="vich-image">
+        {{- form_widget(form.file) -}}
+        {%- if form.delete is defined -%}
+            {{- form_row(form.delete) -}}
+        {%- endif -%}
+
+        {%- if image_uri -%}
+            <div>
+                <img style="max-width: 100%; height: auto;" src="{{ asset_helper is same as(true) ? asset(image_uri) : image_uri }}" alt="" />
+            </div>
+        {%- endif -%}
+        {%- if download_uri -%}
+            <a class="btn btn-info" href="{{ asset_helper is same as(true) ? asset(download_uri) : download_uri }}" download>
+                {{ translation_domain is same as(false) ? download_label : download_label|trans({}, translation_domain) }}
+            </a>
+        {%- endif -%}
+    </div>
+{%- endblock -%}
+
+{%- block vich_file_widget -%}
+    <div class="vich-file">
+        {{- form_widget(form.file) -}}
+        {%- if form.delete is defined -%}
+            {{- form_row(form.delete) -}}
+        {%- endif -%}
+
+        {%- if download_uri -%}
+            <a class="btn btn-info" href="{{ asset_helper is same as(true) ? asset(download_uri) : download_uri }}" download>
+                {{ 'action.download'|trans }} {{ translation_domain is same as(false) ? download_label : download_label|trans({}, translation_domain) }}
+            </a>
+        {%- endif -%}
+    </div>
+{%- endblock -%}

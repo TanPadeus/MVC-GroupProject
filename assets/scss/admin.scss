@@ -1,5 +1,6 @@
-@import "~bootswatch/Darkly/variables";
-@import "~eonasdan-bootstrap-datetimepicker/src/sass/bootstrap-datetimepicker-build.scss";
+@import "~bootswatch/dist/Slate/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~tempusdominus-bootstrap-4/src/sass/tempusdominus-bootstrap-4.scss";
 @import "bootstrap-tagsinput.scss";
 
 /* Page: 'Backend post index'
@@ -24,3 +25,7 @@ body#admin_post_show .post-tags .label-default {
 body#admin_post_show .post-tags .label-default i {
   color: #95A6A7;
 }
+.input-group{
+  flex-wrap: nowrap!important;
+}
+

@@ -60,6 +60,10 @@
                 <source>action.save</source>
                 <target>Zapisz</target>
             </trans-unit>
+            <trans-unit id="action.download">
+                <source>action.download</source>
+                <target>Pobierz</target>
+            </trans-unit>
             <trans-unit id="action.delete_project">
                 <source>action.delete_project</source>
                 <target>Usuń projekt</target>

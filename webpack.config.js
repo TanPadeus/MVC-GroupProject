@@ -11,7 +11,8 @@ Encore
     .autoProvidejQuery()
     .autoProvideVariables({
         "window.Bloodhound": require.resolve('bloodhound-js'),
-        "jQuery.tagsinput": "bootstrap-tagsinput"
+        "jQuery.tagsinput": "bootstrap-tagsinput",
+         moment: 'moment'
     })
     .enableSassLoader()
     // when versioning is enabled, each filename will include a hash that changes
