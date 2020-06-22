@@ -432,6 +432,14 @@
                 <target>Artykuł usunięty</target>
             </trans-unit>
 
+            <trans-unit id="project.image_label">
+                <source>project.image_label</source>
+                <target>Zdjęcie</target>
+            </trans-unit>
+            <trans-unit id="project.upload_file">
+                <source>project.upload_file</source>
+                <target>Dodaj pliki projektu by móc go pobrać</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
