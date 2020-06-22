@@ -366,3 +366,10 @@ body#blog_search .post-metadata {
   top: 80px;
   z-index: 500;
 }
+
+.modal{
+  top: 50px!important;
+}
+.modal-backdrop{
+  z-index: 400!important;
+}

@@ -113,7 +113,7 @@ class Project
      *
      * @ORM\OneToMany(
      *      targetEntity="Comment",
-     *      mappedBy="post",
+     *      mappedBy="project",
      *      orphanRemoval=true,
      *      cascade={"persist"}
      * )
@@ -125,7 +125,7 @@ class Project
      * @var Tag[]|ArrayCollection
      *
      * @ORM\ManyToMany(targetEntity="App\Entity\Tag", cascade={"persist"})
-     * @ORM\JoinTable(name="post_tag")
+     * @ORM\JoinTable(name="project_tag")
      * @ORM\OrderBy({"name": "ASC"})
      * @Assert\Count(max="4", maxMessage="post.too_many_tags")
      */

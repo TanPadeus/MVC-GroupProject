@@ -30,7 +30,7 @@ class Comment
      * @ORM\ManyToOne(targetEntity="Project", inversedBy="comments")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $post;
+    private $project;
 
     /**
      * @var string
@@ -111,13 +111,13 @@ class Comment
         $this->author = $author;
     }
 
-    public function getPost(): ?Project
+    public function getProject(): ?Project
     {
-        return $this->post;
+        return $this->Project;
     }
 
     public function setPost(Project $post): void
     {
-        $this->post = $post;
+        $this->project = $post;
     }
 }
