@@ -51,11 +51,12 @@ class ProjectType extends AbstractType
                 'label' => 'label.content',
             ])
             ->add('imageFile', VichImageType::class, [
-                'label' => 'Image',
+                'translation_domain' => 'messages',
+                'label' => 'project.image_label',
                 'required' => false,
             ])
             ->add('projectFiles', VichFileType::class, [
-                'label' => 'Upload project files to enable download',
+                'label' => 'project.upload_file',
                 'required' => false,
                 'download_label' => static function (Project $project) {
                     return $project->getProjectFilesName();}

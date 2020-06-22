@@ -447,6 +447,15 @@
                 <target>News deleted</target>
             </trans-unit>
 
+            <trans-unit id="project.image_label">
+                <source>project.image_label</source>
+                <target>Image</target>
+            </trans-unit>
+            <trans-unit id="project.upload_file">
+                <source>project.upload_file</source>
+                <target>Upload project files to enable download</target>
+            </trans-unit>
+
         </body>
     </file>
 </xliff>
