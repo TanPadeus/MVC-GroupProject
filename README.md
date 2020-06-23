@@ -162,34 +162,46 @@ przypisanych do poszczególnych projektów.
 
 # Baza Danych
 ## Tabele
-### Comments
-- id; int(11)
-- post_id; int(11)
-- author_id; int(11)
-- content; longtext
-- published_at; datetime
+### comments
+- id: int(11)
+- project_id: int(11)
+- author_id: int(11)
+- content: longtext
+- published_at: datetime
 
-### Posts
-- id; int(11)
-- author_id; int(11)
-- title; varchar(255)
-- slug; varchar(255)
-- summary; varchar(255)
-- content; longtext
-- published_at; datetime
+### news
+- id: int(11)
+- author_id: int(11)
+- title: varchar(255)
+- slug: varchar(255)
+- summary: varchar(255)
+- content: longtext
+- published_at: datetime
 
-### Post_Tag
-- post_id; int(11)
-- tag_id; int(11)
+### projects
+- id: int(11)
+- author_id: int(11)
+- title: varchar(255)
+- slug: varchar(255)
+- summary: varchar(255)
+- content: longtext
+- image: varchar(255)
+- project_files_name: varchar(255
+- published_at: datetime
+- updated_at: datetime
 
-### Tags
-- id; int(11)
-- name; varchar(255)
+### project_tag
+- project_id: int(11)
+- tag_id: int(11)
 
-### Users
-- id; int(11)
-- full_name; varchar(255)
-- username; varchar(255)
-- email; varchar(255)
-- password; varchar(255)
-- roles; longtext
+### tags
+- id: int(11)
+- name: varchar(255)
+
+### users
+- id: int(11)
+- full_name: varchar(255)
+- username: varchar(255)
+- email: varchar(255)
+- password: varchar(255)
+- roles: longtext
