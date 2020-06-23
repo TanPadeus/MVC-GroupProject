@@ -1,3 +1,10 @@
+# Spis treści
+1. [Wymagania](#wymagania)
+2. [Pierwsze odpalenie projektu](#pierwsze-odpalenie-projektu)
+3. [Dodatkowe informacje](#dodatkowe-informacje)
+    * [Konfiguracja php](#konfiguracja-php)
+    * [Konfiguracja bazy danych](#konfiguracja-bazy-danych)
+
 # Wymagania
 - [Symfony CLI](https://symfony.com/download) (wersja 5.1)
 - [Yarn package manager](https://classic.yarnpkg.com/en/docs/install/#windows-stable)
