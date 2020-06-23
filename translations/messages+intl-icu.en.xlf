@@ -52,6 +52,7 @@
                 <target><![CDATA[Try loading this page again in some minutes or <a href="{url}">go back to the homepage</a>.]]></target>
             </trans-unit>
 
+            <!-- MADE BY ARTUR WENDA -->
             <trans-unit id="title.login">
                 <source>title.login</source>
                 <target>Secure Sign in</target>
@@ -455,6 +456,7 @@
                 <source>project.upload_file</source>
                 <target>Upload project files to enable download</target>
             </trans-unit>
+            <!-- END MADE BY ARTUR WENDA -->
 
         </body>
     </file>

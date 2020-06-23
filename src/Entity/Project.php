@@ -1,5 +1,7 @@
 <?php
 
+// MADE BY MACIEJ MORYŃ
+
 namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;

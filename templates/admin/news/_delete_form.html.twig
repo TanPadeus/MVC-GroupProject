@@ -1,3 +1,5 @@
+<!-- MADE BY ARTUR WENDA -->
+
 {{ include('news/_delete_news_confirmation.html.twig') }}
 <form action="{{ url('admin_news_delete', {id: news.id}) }}" method="post" data-confirmation="true" id="delete-form">
     <input type="hidden" name="token" value="{{ csrf_token('delete') }}" />

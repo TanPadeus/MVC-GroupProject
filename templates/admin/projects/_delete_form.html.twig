@@ -1,3 +1,5 @@
+<!-- MADE BY MACIEJ MORYŃ -->
+
 {{ include('projects/_delete_project_confirmation.html.twig') }}
 <form action="{{ url('admin_project_delete', {id: post.id}) }}" method="post" data-confirmation="true" id="delete-form">
     <input type="hidden" name="token" value="{{ csrf_token('delete') }}" />
