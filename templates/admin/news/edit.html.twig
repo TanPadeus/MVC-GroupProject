@@ -1,10 +1,9 @@
-<!-- MADE BY ARTUR WENDA -->
-
 {% extends 'admin/layout.html.twig' %}
 
 {% block body_id 'admin_news_edit' %}
 
 {% block main %}
+    <!-- MADE BY ARTUR WENDA -->
     <h1>{{ 'title.edit_news'|trans({'%id%': news.id}) }}</h1>
 
     {{ include('admin/news/_form.html.twig', {

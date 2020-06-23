@@ -1,10 +1,9 @@
-<!-- MADE BY MACIEJ MORYŃ -->
-
 {% extends 'admin/layout.html.twig' %}
 
 {% block body_id 'admin_project_edit' %}
 
 {% block main %}
+    <!-- MADE BY MACIEJ MORYŃ -->
     <h1>{{ 'title.edit_project'|trans({'%id%': post.id}) }}</h1>
 
     {{ include('admin/projects/_form.html.twig', {
