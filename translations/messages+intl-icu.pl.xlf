@@ -15,6 +15,7 @@
                 <target>Niedostępne</target>
             </trans-unit>
 
+            <!-- MADE BY MACIEJ MORYŃ -->
             <trans-unit id="title.login">
                 <source>title.login</source>
                 <target>Bezpieczne logowanie</target>
@@ -440,6 +441,8 @@
                 <source>project.upload_file</source>
                 <target>Dodaj pliki projektu by móc go pobrać</target>
             </trans-unit>
+            <!-- END MADE BY MACIEJ MORYŃ -->
+
         </body>
     </file>
 </xliff>
