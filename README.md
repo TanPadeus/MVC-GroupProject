@@ -2,9 +2,9 @@
 Członkowie grupy: Moryń Maciej, Wenda Artur
 
 # Spis treści
-1. [Informacje ogólne](#informacje-og-lne)
+1. [Informacje ogólne](#informacje-ogólne)
     * [Konfiguracja i pierwsze włączenie](#konfiguracja-i-pierwsze-wczenie)
-2. [Technologie](#u-yte-technologie)
+2. [Technologie](#użyte-technologie)
 3. [Wartstwy MVC](#warstwy-mvc)
 	* i. [Widoki](#widoki)
 	* ii. [Kontrolery](#kontrolery)
