@@ -2,6 +2,7 @@
 1. [Wymagania](#wymagania)
 2. [Pierwsze odpalenie projektu](#pierwsze-odpalenie-projektu)
 3. [Dodatkowe informacje](#dodatkowe-informacje)
+    * [Logowanie w aplikaji](#logowanie-w-aplikaji)
     * [Konfiguracja php](#konfiguracja-php)
     * [Konfiguracja bazy danych](#konfiguracja-bazy-danych)
 
@@ -31,6 +32,13 @@ Po początkowej konfiguracji następne odpalenia projektu nie wymagają ponowneg
 # Dodatkowe informacje
 W razie problemów tutaj można znaleźć przykładowe rozwiązania. Jeżeli wystąpił problem inny niż wymieniony prosimy o kontakt.
 
+## Logowanie w aplikaji
+Domyślnie w zrzucie bazy danych jest wpisany jeden użytkownik o prawach administratora.
+* <b>Login:</b> admin
+* <b>Hasło:</b> admin123
+
+Żeby dodać kolejnego użytkownika należy wpisać komendę <code>php bin/console app:add-user</code> i postępować zgodnie z wyświetlanymi informacjami.
+Żeby dodać kolejno konto administratora należy wpisać <code>php bin/console app:add-user --admin</code> i postępować w taki sam sposób jak z dodawaniem zwykłego użytkownika.
 ## Konfiguracja php
 Ważnym jest aby w php.ini używanej wersi php były dostępne rozszerzenia(extensions), przykładowa konfiguracja rozszerzeń dla której projekt działa poprawnie:
 - extension=bz2
