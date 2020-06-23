@@ -129,7 +129,7 @@ class Project
      * @ORM\ManyToMany(targetEntity="App\Entity\Tag", cascade={"persist"})
      * @ORM\JoinTable(name="project_tag")
      * @ORM\OrderBy({"name": "ASC"})
-     * @Assert\Count(max="4", maxMessage="post.too_many_tags")
+     * @Assert\Count(max="10", maxMessage="post.too_many_tags")
      */
     private $tags;
 
