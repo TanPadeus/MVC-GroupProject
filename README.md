@@ -3,7 +3,7 @@ Członkowie grupy: Moryń Maciej, Wenda Artur
 
 # Spis treści
 1. [Informacje ogólne](#informacje-ogólne)
-    * [Konfiguracja i pierwsze włączenie](#konfiguracja-i-pierwsze-włączenie)
+    * [Konfiguracja i uruchamianie](#konfiguracja-i-uruchamianie)
 2. [Technologie](#użyte-technologie)
 3. [Wartstwy MVC](#warstwy-mvc)
 	* i. [Widoki](#widoki)
@@ -27,7 +27,7 @@ Aplikacja internetowa do umieszczania projektów (z ich statusami oraz możliwo�
 posiadająca wyszukiwarkę zawężającą listę projektów działającą na zasadzie słów kluczowych (tagów)
 przypisanych do poszczególnych projektów.
 
-## Konfiguracja i pierwsze włączenie
+## Konfiguracja i uruchamianie
 Informacje związane z konfigracją i ustawianiem lokalnego serwera z projektem można znaleźć tutaj: [instrukcja.md](/Konfiguracja/instrukcja.md)
 
 # Użyte technologie

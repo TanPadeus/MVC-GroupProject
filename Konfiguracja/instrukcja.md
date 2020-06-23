@@ -1,6 +1,6 @@
 # Spis treści
 1. [Wymagania](#wymagania)
-2. [Pierwsze odpalenie projektu](#pierwsze-odpalenie-projektu)
+2. [Pierwsze uruchomienie projektu](#pierwsze-uruchomienie-projektu)
 3. [Dodatkowe informacje](#dodatkowe-informacje)
     * [Logowanie w aplikaji](#logowanie-w-aplikaji)
     * [Konfiguracja php](#konfiguracja-php)
@@ -13,20 +13,20 @@
 - [XAMPP](https://www.apachefriends.org/pl/index.html) (wraz z nim php w wersji 7 lub wyżej)
 - [PHPStorm](https://www.jetbrains.com/phpstorm/) (nie jest wymagane, wszystkie komendy można wpisywać w oknie konsoli ale zdecydowanie zalecane)
 
-# Pierwsze odpalenie projektu
+# Pierwsze uruchomienie projektu
 - Projekt należy pobrać na dysk z gita i wypakować do folderu
-- Odpalić jako projet w PHPStorm lub otworzyć okno konsoli w folderze głównym projektu
-- Odpalić XAMPP (apache oraz mySQL)
+- Uruchomić jako projet w PHPStorm lub otworzyć okno konsoli w folderze głównym projektu
+- Uruchomić XAMPP (apache oraz mySQL)
 - Zaimportować bazę danych w oknie myPHPadmin (zrzut bazy dnych można znaleźć w folderze Konfiguracja. Zostały załączone 2 typy: z minimalną wersją rekordów oraz z przykładowymi danymi w aplikacji)
 - Po po kolei wpisywać komendy do pierwszego skonfigurowania projektu:
     + <code>yarn install</code>
     + <code>composer install</code>
     + <code>yarn encore dev</code>
-- Powyższe komendy upewnią się że wszyskie zależności potrzebne do odpalenia projektu zostaną pobrane
-- Tak skonfigurowany projekt można odpalić komendą <code>symfony serve</code>
-- Projekt powinien się odpalić na lokalnym serwerze (domyślnie: localhost:8000)
+- Powyższe komendy upewnią się że wszyskie zależności potrzebne do uruchomienia projektu zostaną pobrane
+- Tak skonfigurowany projekt można uruchomić komendą <code>symfony serve</code>
+- Projekt powinien się uruchomić na lokalnym serwerze (domyślnie: localhost:8000)
 
-Po początkowej konfiguracji następne odpalenia projektu nie wymagają ponownego używania wszystkich komend. Wystarczy użyć <code>symfony serve</code> do odpalenia servera.
+Po początkowej konfiguracji następne uruchomienia projektu nie wymagają ponownego używania wszystkich komend. Wystarczy użyć <code>symfony serve</code> do włącznenia servera.
 
 
 # Dodatkowe informacje
